@@ -1,141 +1,279 @@
 <!DOCTYPE html>
-<html lang="fr"> 
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marie Guibert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
             color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
         header {
-            background-color: #007bff;
+            background-color: #191970;
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
+            animation: fadeIn 1s ease-out;
         }
 
         header h1 {
-            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
 
         nav {
             text-align: center;
-            margin: 1rem 0;
+            margin: 2rem 0;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
             text-decoration: none;
-            color: #007bff;
-            margin: 0 10px;
+            color: #333;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            background-color: #191970;
+            color: white;
+            transform: scale(1.05);
         }
 
         .container {
-            max-width: 800px;
+            width: 85%;
+            max-width: 1200px;
             margin: 2rem auto;
-            padding: 1rem;
-            background: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            animation: slideUp 1s ease-out;
         }
 
         h2 {
-            color: #007bff;
+            color: #191970;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 0.5rem;
         }
 
-        li {
-            margin-bottom: 1.5rem;
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
         }
 
-        a.project-link {
-            color: #007bff;
+        .bold {
+            font-weight: 700;
+        }
+
+        .projects-list {
+            margin-top: 2rem;
+        }
+
+        .projects-list li {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f4f4f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .projects-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .projects-list a {
+            color: #191970;
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
-        a.project-link:hover {
+        .projects-list a:hover {
+            color: #0C59B5;
             text-decoration: underline;
+        }
+
+        .contact a {
+            color: #191970;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #191970;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                padding: 0.8rem 1.5rem;
+            }
+
+            .container {
+                width: 90%;
+                padding: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
+
 <body>
+
     <header>
         <h1>Marie Guibert - Data Scientist</h1>
     </header>
+
     <nav>
         <a href="#">Accueil</a>
+        <a href="#about">À propos</a>
         <a href="#projets">Mes Projets</a>
+        <a href="#contact">Contact</a>
     </nav>
+
     <div class="container">
         <section id="about">
             <h2>À propos de moi</h2>
-            <p>PRESENTATION A FAIRE</p>
-            <p>Voir mon CV </p>
+            <p>Diplômée d'un Master en Intelligence Artificielle de l'Université de Rennes, je suis passionnée par l'exploitation des données pour résoudre des problématiques complexes. Grâce à mes compétences en modélisation statistique et en traitement de données, j'ai acquis une expertise avec des outils tels que Python, R, Power BI, et Apache Superset. Actuellement en Nouvelle-Zélande, je cherche à mettre à profit mes compétences à Rennes, Nantes ou Paris dès Septembre 2025.</p>
+            <p><strong>Voir mon <a href="CV Marie Guibert">CV</a></strong></p>
         </section>
+
         <section id="Formations">
             <h2>Formations</h2>
             <ul>
                 <li>
-                    <h3>Master en Mathématiques Appliquées, Statistiques (MAS), spécialité Intelligence Artificielle</h3>
-                    <h4>Université de Rennes 2 </h4>
-                    <h4>Master co-accrédité Université de Rennes 2, Rennes, ENSAI et Agrocampus Ouest</h4>
+                    <h3>Master en Intelligence Artificielle</h3>
+                    <h4>Université de Rennes 2</h4>
                     <p>2022 - 2024</p>
                 </li>
                 <li>
-                    <h3>Licence en Mathématiques Appliquées et Informatiques Appliquées aux Sciences Humaines et Sociales (MIASHS), spécialité Economie</h3>
+                    <h3>Licence en Mathématiques Appliquées et Informatique</h3>
                     <h4>Université de Rennes</h4>
                     <p>2019 - 2022</p>
                 </li>
-                <li>Baccaulauréat Economique et Social, spécialité Economie Appronfondie</li>
-                <h4>Lycée Jean Brito, Bain de Bretagne</h4>
-                <p>2019</p>
+                <li>
+                    <h3>Baccalauréat Economique et Social</h3>
+                    <h4>Lycée Jean Brito</h4>
+                    <p>2019</p>
+                </li>
             </ul>
-
         </section>
+
         <section id="projets">
-            <h2>Projets</h2>
-            <ul>
-                <li> 
-                    <h3> <bold>Sujet de mémoire</bold> de fin de master</h3>
-                    <p> Réalisation d'une modélisation statistique (scoring) pour analyser les facteurs influençant les demandes de financement écologique des communes en Bretagne.</p>
-                    <p> Outils utilisés :</p>
-                        <ul>
-                            <li> Apache Superset : Visualisation de données</li>
-                            <li> Modélisation statistique : Python</li>
-                        </ul>
-                    <p> Lien vers le tableau de bord</p>
-                    <p> Lien vers mon mémoire</p>
+            <h2>Mes Projets</h2>
+            <ul class="projects-list">
+                <li>
+                    <h3><span class="bold">Sujet de mémoire</span> - Analyse des demandes de financement écologique</h3>
+                    <p>Modélisation statistique (scoring) pour analyser les facteurs influençant les demandes de financement écologique des communes en Bretagne.</p>
+                    <p><strong>Outils utilisés :</strong></p>
+                    <ul>
+                        <li>Apache Superset : Visualisation de données</li>
+                        <li>Python ; Modélisation statistique</li>
+                    </ul>
+                    <p><a href="#">Voir le tableau de bord</a> | <a href="#">Voir mon mémoire</a></p>
                 </li>
                 <li>
                     <h3>Analyse des sentiments sur des tweets</h3>
                     <p>Un projet d'analyse des sentiments utilisant Python et NLTK.</p>
-                    <a class="project-link" href="https://github.com/LIEN" target="_blank">Voir le projet</a>
+                    <a href="https://github.com/LIEN" target="_blank">Voir le projet</a>
                 </li>
                 <li>
                     <h3>Système de recommandation</h3>
-                    <p>Un moteur de recommandations de films basé sur des techniques de filtrage collaboratif.</p>
-                    <a class="project-link" href="https://github.com/LIEN" target="_blank">Voir le projet</a>
+                    <p>Moteur de recommandations de films basé sur des techniques de filtrage collaboratif.</p>
+                    <a href="https://github.com/LIEN" target="_blank">Voir le projet</a>
                 </li>
                 <li>
                     <h3>Étude de données climatiques</h3>
                     <p>Analyse des tendances climatiques à l'aide de pandas et matplotlib.</p>
-                    <a class="project-link" href="https://github.com/LIEN" target="_blank">Voir le projet</a>
+                    <a href="https://github.com/LIEN" target="_blank">Voir le projet</a>
                 </li>
             </ul>
         </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Email : <a href="mailto:marieguibert.mg@example.com">marieguibert.mg@example.com</a></p>
+            <p>LinkedIn : <a href="https://www.linkedin.com/in/marie-guibert-6653571a9/" target="_blank">Mon profil LinkedIn</a></p>
+        </section>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Marie Guibert. Tous droits réservés.</p>
+    </footer>
+
 </body>
+
 </html>
