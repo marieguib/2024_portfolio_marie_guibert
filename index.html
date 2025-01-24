@@ -5,61 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marie Guibert</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <style>
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing: border-box; /* Pour que les paddings et les margins soient inclus dans la taille des éléments */
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Arial', sans-serif;
             color: #333;
             line-height: 1.6;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Pour éviter le scroll horizontal */
             height: 100vh;
             position: relative;
+            text-align: justify;
         }
 
         header {
-            background-color: #191970;
+            background-color: #191970; 
             color: white;
             padding: 2rem 0;
             text-align: center;
-            animation: fadeIn 1s ease-out;
-            z-index: 10;
-            position: relative;
+            animation: fadeIn 1s ease-out; /* Pour animer l'apparition du header */
+            z-index: 10; /* Pour que le header soit au-dessus des autres éléments */
+            position: sticky; /* Pour que le header reste en haut de la page */
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 30pt; /* en pt*/
             font-weight: 700;
         }
 
-        nav {
+        /* Menu de navigation */
+        /* nav {
             text-align: center;
             margin: 2rem 0;
             background-color: #ffffff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Pour ajouter une ombre au menu 
             z-index: 10;
-            position: relative;
+            position: sticky;
+        } 
+        */
+
+        /* Menu de navigation qui s'ouvre sur le côté de la page */
+        nav {
+            background-color: #191970;
+            color: white;
+            list-style-type: none;
+            padding:0;
+            top: 0;
+            left: -250px; /* Pour cacher le menu */
+            height: 100%;
+            width: 25%;
+            position: fixed;
+            overflow: auto;
+            transition: left 0.3s ease; /* Pour animer l'ouverture du menu */
+            z-index: 10;
         }
 
-        nav a {
+        /* Pour aligner les éléments du menu horizontalement */
+        nav a { 
             text-decoration: none;
             color: #333;
             font-weight: 500;
             padding: 1rem 2rem;
-            display: inline-block;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block; /* alignement horizontalement */
+            transition: background-color 0.3s ease, transform 0.3s ease; 
         }
 
         nav a:hover {
             background-color: #191970;
             color: white;
-            transform: scale(1.05);
+            transform: scale(1.05); /* Pour agrandir l'élément au survol */
         }
 
         .container {
@@ -77,28 +95,47 @@
 
         h2 {
             color: #191970;
-            font-size: 2rem;
+            font-size: 20pt;
             margin-bottom: 1rem;
             font-weight: 700;
         }
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 15pt;
             margin: 1.5rem 0 0.5rem;
         }
 
         p {
-            font-size: 1rem;
+            font-size: 12pt;
             margin-bottom: 1rem;
-            line-height: 1.6;
         }
 
         .bold {
             font-weight: 700;
         }
 
+        .flex-container {
+        display: flex;
+        background-color: 191970;
+        }
+
+        .flex-container > div { /* Pour que les éléments à l'intérieur du flex-container aient une largeur égale */
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;
+        font-size: 12pt;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 1rem;
+}
+
         .projects-list {
-            margin-top: 2rem;
+            margin-top: 2rem; /* Pour ajouter de l'espace en haut de la liste */
         }
 
         .projects-list li {
@@ -107,11 +144,11 @@
             background-color: #f4f4f9;
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Pour animer le hover */
         }
 
         .projects-list li:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px); /* Pour décaler l'élément vers le haut au survol */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
@@ -144,32 +181,28 @@
             padding: 1rem;
             text-align: center;
             margin-top: 3rem;
-            z-index: 10;
+            z-index: 10; 
             position: relative;
         }
 
         footer p {
-            font-size: 0.9rem;
+            font-size: 10pt;
         }
 
         .mention {
-            background-color: #4CAF50;
+            background-color: grey;
             color: white;
             padding: 0.2rem 0.6rem;
             border-radius: 5px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 8pt;
+            font-weight: 300;
             margin-left: 1rem;
             margin-top: 0.2rem;
         }
 
-        .mention.bien {
-            background-color: grey;
-        }
-
         .formation-header {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; 
             align-items: center;
         }
 
@@ -179,7 +212,7 @@
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 30pt;
             }
 
             nav a {
@@ -191,46 +224,13 @@
                 padding: 1.5rem;
             }
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <div id="particles-js"></div> <!-- Particles Background -->
 
     <header>
-        <h1>Marie Guibert - Data Scientist</h1>
+        <h1>Marie Guibert</h1>
     </header>
 
     <nav>
@@ -247,67 +247,73 @@
             <p><strong>Voir mon <a href="CV Marie Guibert">CV</a></strong></p>
         </section>
 
-        <section id="Formations">
-            <h2>Formations</h2>
-            <ul>
-                <li>
-                    <div class="formation-header">
-                        <h3>Master en Mathématiques et Statistiques, spécialité Intelligence Artificielle</h3>
-                        <span class="mention bien">Mention Bien</span>
-                    </div>
-                    <h4>Université de Rennes 2</h4>
-                    <p>2022 - 2024</p>
-                </li>
-                <li>
-                    <div class="formation-header">
-                        <h3>Licence en Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales, spécialité Economie</h3>
-                        <span class="mention bien">Mention Bien</span>
-                    </div>
-                    <h4>Université de Rennes</h4>
-                    <p>2019 - 2022</p>
-                </li>
-                <li>
-                    <div class="formation-header">
-                        <h3>Baccalauréat Economique et Social</h3>
-                        <span class="mention bien">Mention Bien</span>
-                    </div>
-                    <h4>Lycée Jean Brito</h4>
-                    <p>2019</p>
-                </li>
-            </ul>
-        </section>
+        <div class="flex-container">    
+            <div>
+            <section id="Formations">
+                <h2>Formations</h2>
+                <ul>
+                    <li>
+                        <div class="formation-header">
+                            <h3>Master en Mathématiques et Statistiques, spécialité Intelligence Artificielle</h3>
+                            <span class="mention">Mention Bien</span>
+                        </div>
+                        <h4>Université de Rennes 2</h4>
+                        <p>2022 - 2024</p>
+                    </li>
+                    <li>
+                        <div class="formation-header">
+                            <h3>Licence en Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales, spécialité Economie</h3>
+                            <span class="mention">Mention Bien</span>
+                        </div>
+                        <h4>Université de Rennes</h4>
+                        <p>2019 - 2022</p>
+                    </li>
+                    <li>
+                        <div class="formation-header">
+                            <h3>Baccalauréat Economique et Social</h3>
+                            <span class="mention">Mention Bien</span>
+                        </div>
+                        <h4>Lycée Jean Brito</h4>
+                        <p>2019</p>
+                    </li>
+                </ul>
+            </section>
+            </div>
 
-        <section id="projets">
-            <h2>Mes Projets</h2>
-            <ul class="projects-list">
-                <li>
-                    <h3><span class="bold">Sujet de mémoire</span> - Analyse des demandes de financement écologique</h3>
-                    <p>Modélisation statistique (scoring) pour analyser les facteurs influençant les demandes de financement écologique des communes en Bretagne.</p>
-                    <p><strong>Outils utilisés :</strong></p>
-                    <ul>
-                        <li>Apache Superset : Visualisation de données</li>
-                        <li>Python ; Modélisation statistique</li>
-                    </ul>
-                    <p><a href="#">Voir le tableau de bord</a> | <a href="#">Voir mon mémoire</a></p>
-                </li>
-                <li>
-                    <h3>Analyse des sentiments sur des tweets</h3>
-                    <p>Un projet d'analyse des sentiments utilisant Python et NLTK.</p>
-                    <a href="https://github.com/LIEN" target="_blank">Voir le projet</a>
-                </li>
-                <li>
-                    <h3>Système de recommandation</h3>
-                    <p>Moteur de recommandations de films basé sur des techniques de filtrage collaboratif.</p>
-                    <a href="https://github.com/LIEN" target="_blank">Voir le projet</a>
-                </li>
-                <li>
-                    <h3>Étude de données climatiques</h3>
-                    <p>Analyse des tendances climatiques à l'aide de pandas et matplotlib.</p>
-                    <a href="https://github.com/LIEN" target="_blank">Voir le projet</a>
-                </li>
-            </ul>
-        </section>
-
+            <div>
+            <section id="projets">
+                <h2>Mes Projets</h2>
+                <ul class="projects-list">
+                    <li>
+                        <h3><span class="bold">Sujet de mémoire</span> - Analyse des demandes de financement écologique</h3>
+                        <p>Modélisation statistique (scoring) pour analyser les facteurs influençant les demandes de financement écologique des communes en Bretagne.</p>
+                        <p><strong>Outils utilisés :</strong></p>
+                        <ul>
+                            <li>Apache Superset : Visualisation de données</li>
+                            <li>Python ; Modélisation statistique</li>
+                        </ul>
+                        <p><a href="#">Voir le tableau de bord</a> | <a href="#">Voir mon mémoire</a></p>
+                    </li>
+                    <li>
+                        <h3>Analyse des sentiments sur des tweets</h3>
+                        <p>Un projet d'analyse des sentiments utilisant Python et NLTK.</p>
+                        <a href="https://github.com/LIEN" target="_blank">Voir le projet</a>
+                    </li>
+                    <li>
+                        <h3>Système de recommandation</h3>
+                        <p>Moteur de recommandations de films basé sur des techniques de filtrage collaboratif.</p>
+                        <a href="https://github.com/LIEN" target="_blank">Voir le projet</a>
+                    </li>
+                    <li>
+                        <h3>Étude de données climatiques</h3>
+                        <p>Analyse des tendances climatiques à l'aide de pandas et matplotlib.</p>
+                        <a href="https://github.com/LIEN" target="_blank">Voir le projet</a>
+                    </li>
+                </ul>
+                </div>
+            </section>
+            </div>
+            
         <section id="contact" class="contact">
             <h2>Contact</h2>
             <p>Email : <a href="mailto:marieguibert.mg@example.com">marieguibert.mg@example.com</a></p>
@@ -319,65 +325,8 @@
         <p>&copy; 2025 Marie Guibert. Tous droits réservés.</p>
     </footer>
 
-    <!-- JavaScript for interactive particles background -->
-    <script>
-        particlesJS('particles-js', {
-            particles: {
-                number: {
-                    value: 50,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                shape: {
-                    type: 'circle',
-                    stroke: {
-                        width: 0,
-                        color: '#000000'
-                    }
-                },
-                opacity: {
-                    value: 0.5,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 1,
-                        opacity_min: 0
-                    }
-                },
-                size: {
-                    value: 5,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 4,
-                        size_min: 0.1
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 100,
-                    color: '#191970',
-                    opacity: 0.5,
-                    width: 1
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: 'repulse'
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: 'push'
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>
+
+
