@@ -4,19 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <a>Page d'accueil</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cookie&family=Felipa&family=Lobster&display=swap" rel="stylesheet">
+    
+    <title>Page d'accueil</title>
     <style>
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Lobster', cursive;
-        }
+            font-family: "Felipa", serif;
+            font-weight: 700;
+            font-style: normal, serif;
+    }
+
 
         body{
             background: #0c192c;
             min-height: 100vh;
+            overflow: hidden;
+            position: relative;
         }
+
 
         .container{
             position : relative; 
@@ -42,13 +53,14 @@
             0 0 100px #4fc3dc;
             animation: animate 15s linear infinite; 
             animation-duration: calc(125s / var(--i));
+            z-index: -100;
         }
 
         .bubbles span:nth-child(even){
-            background : #ff2d75; 
-            box-shadow: 0 0 10px #ff2d7544, 
-            0 0 50px #ff2d75, 
-            0 0 100px #ff2d75;
+            background : slateblue; 
+            box-shadow: 0 0 10px darkslateblue, 
+            0 0 50px darkslateblue, 
+            0 0 100px darkslateblue;
         }
 
         @keyframes animate{
@@ -59,7 +71,63 @@
                 transform: translateY(-10vh) scale(1);
             }
         }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: #ffffff;
+            z-index: 100;
+        }
+
+        footer {
+            position: relative;
+            background-color: #0c192c;
+            color: white;
+            text-align: center;
+            padding: 0.5em 0;
+            z-index: 1;
+        }
         
+        .categories {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 800px;
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            animation: fadeInUp 2s ease-in-out;
+            z-index: 1;
+        }
+
+        .category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #0c192c;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .category img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+
+        
+
     </style>
 </head>
 
@@ -108,5 +176,24 @@
             <span style="--i:28"></span>
         </div>
     </div>
+
+    <h1>Marie Guibert</h1>
+
+    <div class="categories">
+        <div class="category">
+            <img src="logo_formations.svg" alt="Exp">
+            <p>Formations</p>
+        </div>
+        <div class="category">
+            <img src="logo_exp.svg" alt="Exp">
+            <p>Expériences</p>
+        </div>
+        <div class="category">
+            <img src="logo_projets.svg" alt="Exp">
+            <p>Projets</p>
+        </div>
+    </div>
+
+    <footer>Me contacter</footer>
 </body>
 </html>
