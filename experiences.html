@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+
+    
+    <title>Expériences - Marie Guibert</title>
+    
+</head>
+
+<body class="page-home">
+
+    <h1>Expériences</h1>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="name">
+                <p>Marie Guibert</p>
+            </div>
+        </div>
+    </header>
+
+
+    <!--  Menu de navigation -->
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="data/logo_menu.svg" alt="logo_menu">
+    </div>
+    <div class="menu" id="menu">
+        <a href="page_accueil.html">Accueil</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="formations.html">Formations</a>
+        <a href="experiences.html">Expériences</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+    <!-- Contenu de la page -->
+    
+
+
+    <!--  Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>
+            <div class="reseaux_sociaux">
+            <a href="https://github.com/marieguib" target="_blank" class="github">
+            <img src="data/logo_github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/marie-guibert-6653571a9" target="_blank" class="linkedin">
+            <img src="data/logo_linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
