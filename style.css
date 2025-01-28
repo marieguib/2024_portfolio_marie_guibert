@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Felipa", serif;
+    font-family: 'Impact', Times, serif;
     font-weight: 700;
     font-style: normal, serif;
 }
@@ -11,57 +11,13 @@
 body{
     background: #0c192c;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: scroll;
     position: relative;
-}
-
-
-.container{
-    position : relative; 
-    width : 100%;
-    height : 100vh; 
-    overflow: hidden;
-}
-
-.bubbles{
-    position : relative; 
-    display : flex;
-}
-
-.bubbles span{
-    position : relative; 
-    width : 30px; 
-    height : 30px; 
-    background: #4fc3dc;
-    margin : 0 4px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #4fc3dc44, 
-    0 0 50px #4fc3dc, 
-    0 0 100px #4fc3dc;
-    animation: animate 15s linear infinite; 
-    animation-duration: calc(125s / var(--i));
-    z-index: -100;
-}
-
-.bubbles span:nth-child(even){
-    background : slateblue; 
-    box-shadow: 0 0 10px darkslateblue, 
-    0 0 50px darkslateblue, 
-    0 0 100px darkslateblue;
-}
-
-@keyframes animate{
-    0%{
-        transform: translateY(100vh) scale(0);
-    }
-    100%{
-        transform: translateY(-10vh) scale(1);
-    }
 }
 
 h1 {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
@@ -69,100 +25,8 @@ h1 {
     z-index: 100;
 }
 
-footer {
-position: fixed;
-background-color: #0c192c;
-color: white;
-text-align: center;
-padding: 1em 0;
-bottom: 0;
-width: 100%;
-z-index: 1;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px 20px;
-}
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.email {
-    font-size: 1.2rem;
-    color: grey;
-    text-decoration: none;
-}
-
-.email:hover {
-    text-decoration: underline;
-}
-
-.github img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-}
-
-.github:hover img {
-    transform: scale(1.2);
-}
-
-.github {
-    margin-left: auto;
-    display: inline-block;
-}
-
-.linkedin img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-}
-
-.linkedin:hover img {
-    transform: scale(1.2);
-}
-
-.linkedin {
-    margin-left: auto;
-    display: inline-block;
-}
-
-.categories {
-    position: absolute;
-    top: 60%;
-    left: 10%;
-    width: 80%;
-    max-width: 800px;
-    justify-content: center;
-    gap: 20px;
-    margin: 50px 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    animation: fadeInUp 2s ease-in-out;
-    z-index: 1;
-}
-
-.diamond {
-width: 150px;
-height: 150px;
-background: darkslateblue; 
-transform: rotate(45deg);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-position: relative;
-padding: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-margin-left: -50px; /* Adjust this value to control the overlap */
-}
-
+/* Menu */ 
 .menu-icon {
     position: absolute;
     top: 20px;
@@ -204,23 +68,64 @@ margin-left: -50px; /* Adjust this value to control the overlap */
     right: 0;
 }
 
-.diamond h3 {
-transform: rotate(-45deg);
-font-size: 1.2rem;
-font-weight: bold;
-margin-bottom: 5px;
+/* Contenu de la page */
+.rectangle.left{
+    position: absolute;
+    top: calc(50% + 400px); /* Place sous le titre */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espace entre les rectangles */
+    z-index: -1;
 }
 
-.diamond p {
-    transform: rotate(-45deg);
-    font-size: 0.9rem;
+/* Pied de page */
+footer {
+position: fixed;
+background-color: #0c192c;
+color: white;
+text-align: center;
+padding: 1em 0;
+bottom: 0;
+width: 100%;
+z-index: 1;
+display: flex;
+align-items: center;
+padding: 10px 20px;
 }
 
-.category img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-    transform: rotate(-45deg);
+.footer-content {
+    display: flex;
+    width: 100%;
 }
 
+.email {
+    font-size: 1.2rem;
+    color: grey;
+    text-decoration: none;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+.reseaux_sociaux {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.github img, .linkedin img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.github:hover img, .linkedin:hover img {
+    transform: scale(1.2);
+}
 

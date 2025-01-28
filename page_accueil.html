@@ -5,66 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cookie&family=Felipa&family=Lobster&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+
     
     <title>Marie Guibert</title>
     
 </head>
 
 <body>
-    <div class="container">
-        <div class="bubbles">
-            <span style="--i:11"></span>
-            <span style="--i:12"></span>
-            <span style="--i:24"></span>
-            <span style="--i:10"></span>
-            <span style="--i:14"></span>
-            <span style="--i:23"></span>
-            <span style="--i:18"></span>
-            <span style="--i:16"></span>
-            <span style="--i:19"></span>
-            <span style="--i:20"></span>
-            <span style="--i:22"></span>
-            <span style="--i:25"></span>
-            <span style="--i:18"></span>
-            <span style="--i:21"></span>
-            <span style="--i:15"></span>
-            <span style="--i:13"></span>
-            <span style="--i:26"></span>
-            <span style="--i:17"></span>
-            <span style="--i:13"></span>
-            <span style="--i:28"></span>
-            <span style="--i:11"></span>
-            <span style="--i:12"></span>
-            <span style="--i:24"></span>
-            <span style="--i:10"></span>
-            <span style="--i:14"></span>
-            <span style="--i:23"></span>
-            <span style="--i:18"></span>
-            <span style="--i:16"></span>
-            <span style="--i:19"></span>
-            <span style="--i:20"></span>
-            <span style="--i:22"></span>
-            <span style="--i:25"></span>
-            <span style="--i:18"></span>
-            <span style="--i:21"></span>
-            <span style="--i:15"></span>
-            <span style="--i:13"></span>
-            <span style="--i:26"></span>
-            <span style="--i:17"></span>
-            <span style="--i:13"></span>
-            <span style="--i:28"></span>
-        </div>
-    </div> 
 
     <h1>Marie Guibert</h1>
+
+    <!--  Menu de navigation -->
+
     <div class="menu-icon" onclick="toggleMenu()">
         <img src="logo_menu.svg" alt="logo_menu">
     </div>
     <div class="menu" id="menu">
         <a href="#home">Accueil</a>
+        <a href="#moi">Qui suis-je ?</a>
         <a href="#formations">Formations</a>
         <a href="#experiences">Expériences</a>
         <a href="#projets">Projets</a>
@@ -77,29 +36,22 @@
             menu.classList.toggle('active');
         }
     </script>
-    <div class="categories">
-        <div class="diamond">
-            <img src="logo_formations.svg" alt="logo_experiences", style=transform:rotate(-45deg);>
-            <h3>Formations</h3>
-        </div>
-        <div class="diamond">
-            <img src="logo_exp.svg" alt="logo_formations", style=transform:rotate(-45deg);>
-            <h3>Expériences</h3>
-        </div>
-        <div class="diamond">
-            <img src="logo_projets.svg" alt="logo_projets", style=transform:rotate(-45deg);>
-            <h3>Projets</h3>
-        </div>
+
+    <!-- Contenu de la page -->
+    <div class="rectangles-container">
     </div>
 
+
+    <!--  Pied de page -->
     <footer>
         <div class="footer-content">
             <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>
+            <div class="reseaux_sociaux">
             <a href="https://github.com/marieguib" target="_blank" class="github">
-            <img src="logo_github.png" alt="GitHub">
+            <img src="logo_github.png" alt="GitHub"></a>
             <a href="https://www.linkedin.com/in/marie-guibert-6653571a9" target="_blank" class="linkedin">
-            <img src="logo_linkedin.svg" alt="LinkedIn">
-            </a>
+            <img src="logo_linkedin.svg" alt="LinkedIn"></a>
+            </div>
         </div>
     </footer>
 
