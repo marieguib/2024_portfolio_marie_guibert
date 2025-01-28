@@ -9,6 +9,12 @@
 
 /* Corps de la page */
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap : 30px;
     background: #0c192c;
     min-height: 100vh;
     overflow: scroll;
@@ -161,19 +167,24 @@ footer {
 
 /* Style spécifique à la page contact */
 body.page-contact h1 {
-    font-size: 2.5rem;
-    color: white;
+    position: absolute;
+    top: calc(35% + 100px); /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
 }
 
 body.page-contact section {
     position: absolute;
+    top: calc(55% + 100px); /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 100px auto; /* Centrer la section */
-    max-width: 600px;
-    color : #666666; 
+    max-width: 800px;
+    color: #666666;
 }
 
 
