@@ -1,32 +1,29 @@
-*{
+/* Styles généraux */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Impact', Times, serif;
     font-weight: 700;
-    font-style: normal, serif;
 }
 
-
-body{
+/* Corps de la page */
+body {
     background: #0c192c;
     min-height: 100vh;
     overflow: scroll;
     position: relative;
+    color: #ffffff;
 }
 
+/* Titres */
 h1 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 3rem;
     color: #ffffff;
-    z-index: 100;
+    text-align: center;
 }
 
-
-/* Menu */ 
+/* Menu */
 .menu-icon {
     position: absolute;
     top: 20px;
@@ -54,7 +51,7 @@ h1 {
 }
 
 .menu a {
-    color: grey;
+    color: #666666;
     text-decoration: none;
     font-size: 1.5rem;
     margin: 20px 0;
@@ -68,8 +65,8 @@ h1 {
     right: 0;
 }
 
-/* Contenu de la page */
-#presentation {
+/* Contenu de la page d'accueil */
+.presentation {
     position: absolute;
     top: calc(35% + 100px); /* Adjust as needed */
     left: 50%;
@@ -91,7 +88,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    color : #666666;
+    color: #666666;
 }
 
 .category img {
@@ -103,7 +100,7 @@ h1 {
 .category h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color : white;
+    color: white;
 }
 
 .category p {
@@ -150,13 +147,36 @@ footer {
     z-index: 2;
 }
 
-.github img, .linkedin img {
+.github img,
+.linkedin img {
     width: 30px;
     height: 30px;
     transition: transform 0.3s ease;
 }
 
-.github:hover img, .linkedin:hover img {
+.github:hover img,
+.linkedin:hover img {
     transform: scale(1.2);
 }
 
+/* Style spécifique à la page contact */
+body.page-contact h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+body.page-contact section {
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 100px auto; /* Centrer la section */
+    max-width: 600px;
+    color : #666666; 
+}
+
+
+body.page-contact a:hover {
+    text-decoration: underline;
+}
