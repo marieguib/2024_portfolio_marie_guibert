@@ -69,30 +69,61 @@ h1 {
 }
 
 /* Contenu de la page */
-.rectangle.left{
+#presentation {
     position: absolute;
-    top: calc(50% + 400px); /* Place sous le titre */
+    top: calc(35% + 100px); /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Espace entre les rectangles */
-    z-index: -1;
+    align-items: center;
+    gap: 50px; /* Space between categories */
+    z-index: 50;
+}
+
+.categories {
+    display: flex;
+    gap: 40px; /* Space between category items */
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color : #666666;
+}
+
+.category img {
+    width: 70px;
+    height: 70px;
+    padding: 10px; /* Adjust the padding as needed */
+}
+
+.category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color : white;
+}
+
+.category p {
+    font-size: 1rem;
+    max-width: 200px;
 }
 
 /* Pied de page */
 footer {
-position: fixed;
-background-color: #0c192c;
-color: white;
-text-align: center;
-padding: 1em 0;
-bottom: 0;
-width: 100%;
-z-index: 1;
-display: flex;
-align-items: center;
-padding: 10px 20px;
+    position: fixed;
+    background-color: #0c192c;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .footer-content {
