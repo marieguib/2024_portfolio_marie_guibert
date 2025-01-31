@@ -91,6 +91,26 @@ header {
 }
 
 /* Contenu de la page d'accueil */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -70%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+body.page-contact h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeInDown 1s ease-out forwards;
+    opacity: 0; /* Assurez-vous qu'il est invisible au départ */
+}
+
 .presentation {
     position: absolute;
     top: calc(35% + 100px); /* Adjust as needed */
@@ -185,8 +205,60 @@ footer {
 }
 
 /* Style spécifique à la page formations */ 
+.liste-formations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
 
+.formation {
+    background-color: #1a2b4c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.formation:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.formation h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.formation h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.formation h4 {
+    font-size: 1rem;
+    font-style: italic;
+    color: grey;
+    margin-top: 10px;
+}
+
+.formation p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: grey;
+    display: none;
+}
+
+.formation p:target{
+    display:block;
+}
+
+.formation details {
+    cursor: pointer;
+    margin-top: 10px;
+    color : grey;
+}
 
 
 /* Style spécifique à la page contact */
