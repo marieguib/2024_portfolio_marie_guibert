@@ -244,15 +244,16 @@ footer {
     margin-top: 10px;
 }
 
-.formation p {
-    margin-top: 10px;
+.formation .mention {
     font-size: 1rem;
-    color: grey;
-    display: none;
-}
-
-.formation p:target{
-    display:block;
+    color: grey; /* Dark orchid color for "mention bien" */
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px dashed grey;
+    border-radius: 10px;
 }
 
 .formation details {
