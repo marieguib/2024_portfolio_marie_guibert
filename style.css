@@ -279,6 +279,61 @@ footer {
     margin-top: 10px;
 }
 
+/* Style spécifique à la page projets */
+body.page-projets h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+}
+
+.projects-container {
+    position: absolute;
+    top: calc(50% + 100px); /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.project-card {
+    background: #1a2b4c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-details {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background: #1a2b4c;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 800px;
+    display: none;
+    white-space: pre-line;
+}
+
+.project-card h2 {
+    margin-bottom: 10px; /* Add space between the title and the text */
+}
+
 /* Style spécifique à la page contact */
 body.page-contact h1 {
     position: absolute;
