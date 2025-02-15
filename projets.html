@@ -12,7 +12,7 @@
 <header>
     <div class="header-content">
         <div class="name">
-            <p>Marie Guibert</p>
+            <a href="page_accueil.html">Marie Guibert</a>
         </div>
     </div>
 </header>
@@ -40,42 +40,26 @@
 
     <h1>Projets</h1>
     <div class="projects-container">
-        <div class="project-card" onclick="showProjectDetails('Visualisation de Données', '1. projet\n2. projet\n3. projet')">
-            <h2>Visualisation de Données</h2>
-            <p>Projets pour analyser, représenter et mettre en valeur des données efficacement.</p>
+        <div class="project-card">
+            <img src="data/logos/logo_analyse.svg" alt="Données">
+            <a href="projets_data_science.html">
+                <h2>Data science et modélisation statistique</h2>
+            </a>
         </div>
-        <div class="project-card" onclick="showProjectDetails('Machine Learning', '1. projet\n2. projet\n3. projet')">
-            <h2>Machine Learning</h2>
-            <p>Implémentation d’algorithmes dans le but de réaliser de la prédiction.</p>
+        <div class="project-card">
+            <img src="data/logos/logo_economie.svg" alt="Economie">
+            <a href="projets_economie.html">
+                <h2>Etudes économiques</h2>
+            </a>
         </div>
-        <div class="project-card" onclick="showProjectDetails('Clustering', '1. projet\n2. projet\n3. projet')">
-            <h2>Clustering</h2>
-            <p>A compléter</p>
-        </div>
-        <div class="project-card" onclick="showProjectDetails('Deep Learning', '1. projet\n2. projet\n3. projet')">
-            <h2>Deep Learning</h2>
-            <p>A compléter</p>
-        </div>
-        <div class="project-card" onclick="showProjectDetails('Mémoire', '1. projet\n2. projet\n3. projet')">
-            <h2>Mémoire de fin d'études</h2>
-            <p>A compléter</p>
+        <div class="project-card">
+            <img src="data/logos/logo_ecologie.svg" alt="Ecologie">
+            <a href="memoire.html">
+                <h2>Mémoire de fin d'études</h2>
+            </a>
         </div>
     </div>
 
-    <div id="project-details" class="project-details">
-        <h2 id="project-title"></h2>
-        <p id="project-description"></p>
-    </div>
-
-    <script>
-        function showProjectDetails(title, description) {
-            document.getElementById('project-title').innerText = title;
-            document.getElementById('project-description').innerText = description;
-            document.getElementById('project-details').style.display = 'block';
-            document.getElementById('project-details').scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
-    
 
     <footer>
         <div class="footer-content">
