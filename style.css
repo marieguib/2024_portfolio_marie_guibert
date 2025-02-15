@@ -300,15 +300,13 @@ body.page-projets h1 {
 
 .projects-container {
     position: absolute;
-    top: calc(50% + 100px); /* Adjust as needed */
+    top: 70%; /* Ajuste en fonction du placement du titre */
     left: 50%;
     transform: translate(-50%, -50%);
-    display: grid;
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
     gap: 20px;
     padding: 20px;
-    margin: auto;
+    overflow-x: auto; /* Pour rendre les cartes défilables horizontalement si nécessaire */
 }
 
 .project-card {
@@ -318,6 +316,7 @@ body.page-projets h1 {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s;
     cursor: pointer;
+    width: 250px; /* Fixer la largeur de chaque carte */
 }
 
 .project-card:hover {
