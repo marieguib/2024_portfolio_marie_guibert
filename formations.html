@@ -10,14 +10,27 @@
 
 <!-- Header -->
 <header>
-    <div class="header-content">
-        <div class="name">
-            <a href="page_accueil.html">Marie Guibert</a>
-        </div>
+    <div class="name">
+        <a href="page_accueil.html">Marie Guibert</a>
     </div>
 </header>
 
 <body class="page-formations">
+
+    <!-- Section titre -->
+    <section class="hero-section">
+        <h1>Formations</h1>
+        <div class="separator"></div> <!-- Ligne sous le titre -->
+
+        <!-- Bouton de téléchargement du CV -->
+        <a href="data/CV Marie Guibert.pdf" class="download-cv" download>Télécharger mon CV</a>
+
+        <!-- Flèche vers le bas -->
+        <div class="scroll-down">⬇</div>
+    </section>
+
+
+    <!--  Menu de navigation -->
 
     <div class="menu-icon" onclick="toggleMenu()">
         <img src="data/logos/logo_menu.svg" alt="logo_menu">
@@ -33,37 +46,38 @@
 
     <script>
         function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('active');
+        const menu = document.getElementById('menu');
+        const menuIcon = document.querySelector('.menu-icon');
+        menu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
         }
     </script>
 
-    <h1>Formations</h1>
-
+    <!--  Contenu de la page -->
     <div class="liste-formations">
         <div class="formation">
             <article>
-            <h2>Master en Mathématiques Appliquées et Statistiques (MAS)</h2>
-            <h3>Université de Rennes 2, 2022 - 2024</h3>
-            <h3>Spécialisation en Intelligence Artificielle</h3>
-            <div class="mention">
-                <p>Mention Bien</p>
-            </div>
-            <details>
-                <summary>Cliquez pour plus d'informations</summary>
-                <ul>
-                <li><h4>Résumé</h4> : Cette formation est la suite logique de la licence MIASHS puisqu'elle se base sur les acquis de ces trois ans de formation.
-                    En effet, elle m'a permis d'acquérir des compétences solides sur la modélisation et les méthodes statistiques, 
-                    ainsi que les outils informatiques et numériques pour les mettre en oeuvre.</li>
-                <li><h4>Compétences</h4> : 
-                    <ul style="list-style-type: square;">
-                        <li>Modélisation, méthodes statistiques, analyse de données, outils informatiques et numériques.</li>
-                        <li>Gestion de projet, travail en équipe, communication, autonomie, rigueur, curiosité</li>
+                <h2>Master en Mathématiques Appliquées et Statistiques (MAS)</h2>
+                <h3>Université de Rennes 2, 2022 - 2024</h3>
+                <h3>Spécialisation en Intelligence Artificielle</h3>
+                <div class="mention">
+                    <p>Mention Bien</p>
+                </div>
+                <details>
+                    <summary>Cliquez pour plus d'informations</summary>
+                    <ul>
+                        <li><h4>Résumé</h4> : Cette formation est la suite logique de la licence MIASHS puisqu'elle se base sur les acquis de ces trois ans de formation.
+                            En effet, elle m'a permis d'acquérir des compétences solides sur la modélisation et les méthodes statistiques, 
+                            ainsi que les outils informatiques et numériques pour les mettre en oeuvre.</li>
+                        <li><h4>Compétences</h4> : 
+                            <ul style="list-style-type: square;">
+                                <li>Modélisation, méthodes statistiques, analyse de données, outils informatiques et numériques.</li>
+                                <li>Gestion de projet, travail en équipe, communication, autonomie, rigueur, curiosité</li>
+                            </ul>
+                        <li><h4>Projets</h4> : J'ai travaillé sur divers projets que vous pouvez retrouver sur la <a href="projets.html">page projets</a> de mon portfolio.</li>
+                        <li><h4>Plus d'infos</h4> : Pour avoir plus de détails au sujet de cette formation, vous pouvez directement consulter la <a href="https://formations.univ-rennes2.fr/fr/formations/master-37/master-mention-mathematiques-appliquees-statistique-parcours-sciences-des-donnees-intelligence-artificielle-JFTJBMKM.html">page web dédiée.</a></li>
                     </ul>
-                <li><h4>Projets</h4> : J'ai travaillé sur divers projets que vous pouvez retrouver sur la <a href="projets.html">page projets</a> de mon portfolio.</li>
-                <li><h4>Plus d'infos</h4> : Pour avoir plus de détails au sujet de cette formation, vous pouvez directement consulter la <a href="https://formations.univ-rennes2.fr/fr/formations/master-37/master-mention-mathematiques-appliquees-statistique-parcours-sciences-des-donnees-intelligence-artificielle-JFTJBMKM.html">page web dédiée.</a></li>
-                </ul>
-            </details>
+                </details>
             </article>
         </div>
 
@@ -103,6 +117,7 @@
         </div>
     </div>
 
+    <!--  Pied de page -->
     <footer>
         <div class="footer-content">
             <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>
@@ -115,6 +130,19 @@
         </div>
     </footer>
 
-</body>
+    <!--  Arrière plan-->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 2 },
+                move: { speed: 1 },
+                line_linked: { enable: true, opacity: 0.5 }
+            }
+        });
+    </script>
 
+</body>
 </html>

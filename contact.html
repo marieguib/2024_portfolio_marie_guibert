@@ -16,28 +16,33 @@
         </div> 
     </header>  
     
-    <!-- Menu -->
-    <div class="menu-icon" onclick="toggleMenu()">         
-        <img src="data/logos/logo_menu.svg" alt="logo_menu">     
-    </div>     
-    <div class="menu" id="menu">         
-        <a href="page_accueil.html">Accueil</a>         
-        <a href="qui-suis-je.html">Qui suis-je ?</a>         
-        <a href="formations.html">Formations</a>         
-        <a href="experiences.html">Expériences</a>         
-        <a href="projets.html">Projets</a>         
-        <a href="contact.html">Contact</a>     
-    </div>  
-    
-    <script>         
-        function toggleMenu() {             
-            const menu = document.getElementById('menu');             
-            menu.classList.toggle('active');         
-        }     
+    <h1>Contactez-moi !</h1> 
+    <div class="separator"></div>
+
+   <!--  Menu de navigation -->
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="data/logos/logo_menu.svg" alt="logo_menu">
+    </div>
+    <div class="menu" id="menu">
+        <a href="page_accueil.html">Accueil</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="formations.html">Formations</a>
+        <a href="experiences.html">Expériences</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+        const menu = document.getElementById('menu');
+        const menuIcon = document.querySelector('.menu-icon');
+        menu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+        }
     </script>  
     
-    <!-- Contenu principal -->
-    <h1>Contactez-moi !</h1>  
+    <!-- Contenu principal --> 
     <main>         
         <section>             
             <p>Vous pouvez m'envoyer un email à <a href="mailto:marieguibert.mg@gmail.com">marieguibert.mg@gmail.com</a> !</p>             
@@ -59,5 +64,20 @@
             </div>         
         </div>     
     </footer>  
+
+    <!--  Arrière plan-->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 2 },
+                move: { speed: 1 },
+                line_linked: { enable: true, opacity: 0.5 }
+            }
+        });
+    </script>
+    
 </body>  
 </html>
