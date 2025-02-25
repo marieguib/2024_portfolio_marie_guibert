@@ -276,8 +276,6 @@ footer {
     50% { transform: translateY(10px); }
 }
 
-
-
 .liste-formations {
     display: flex;
     flex-direction: column;
@@ -397,6 +395,12 @@ body.page-projets h1 {
     width: 50px;
     height: 50px;
     object-fit: cover;
+}
+
+.project-card a {
+    font-size: 1rem;
+    color: white; 
+    text-decoration: none;
 }
 
 /* Style spécifique à la page contact */
