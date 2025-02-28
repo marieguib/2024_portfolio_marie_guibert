@@ -19,8 +19,11 @@
 
 <body class="page-projets">
 
-    <h1>Projets</h1>
-    <div class="separator"></div>
+    <section class="hero-section-projects">
+        <h1>Projets</h1>
+        <div class="separator"></div>
+
+    </section>
 
     <!--  Menu de navigation -->
     <div class="menu-icon" onclick="toggleMenu()">
@@ -46,27 +49,36 @@
 
     
     <div class="projects-container">
-        <div class="project-card">
+        <div class="project-card" onclick="scrollToSection('datascience')">
             <img src="data/logos/logo_analyse.svg" alt="Données">
-            <a href="projets_data_science.html">
-                <h2>Data science et modélisation statistique</h2>
-            </a>
+            <h2>Data science et modélisation statistique</h2>
         </div>
         <div class="project-card">
             <img src="data/logos/logo_economie.svg" alt="Economie">
-            <a href="projets_economie.html">
-                <h2>Etudes économiques</h2>
-            </a>
+            <h2>Etudes économiques</h2>
         </div>
         <div class="project-card">
             <img src="data/logos/logo_ecologie.svg" alt="Ecologie">
-            <a href="memoire.html">
-                <h2>Mémoire de fin d'études</h2>
-            </a>
+            <h2>Mémoire de fin d'études</h2>
         </div>
     </div>
 
 
+    <div class="scroll-down">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 8 12 16 20 8"></polyline>
+        </svg>
+    </div>
+
+    <!-- Sections des projets -->
+    <section id="datascience" class="project-section">
+        <h3>Data Science et Modélisation Statistique</h3>
+        <p>Contenu sur la data science...</p>
+    </section>
+
+    
+
+    <!--  Footer -->
     <footer>
         <div class="footer-content">
             <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>
@@ -91,7 +103,16 @@
                 line_linked: { enable: true, opacity: 0.5 }
             }
         });
-    </script>
+        
+        // Fonction de défilement fluide vers la section de projet
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth' // pour un défilement fluide
+            });
+        }
 
+        </script>
 </body>
 </html>

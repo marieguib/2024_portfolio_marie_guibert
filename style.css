@@ -116,6 +116,7 @@ header {
     background-color: white;
     width: 20%;
     margin: 10px 0;
+    display: block;
 }
 
 /* Pied de page */
@@ -221,6 +222,7 @@ footer {
 /* Style spécifique à la page formations */ 
 /* --- Section titre avec le bouton ou la flèche --- */
 .hero-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -354,33 +356,54 @@ footer {
 } 
 
 /* Style spécifique à la page projets */
-body.page-projets h1 {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.hero-section-projects {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Style du titre --- */
+.hero-section-projects h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* --- Ligne sous le titre --- */
+.separator {
+    height: 1px;
+    background-color: white;
+    width: 50%;
+    margin-top: 10px;
 }
 
 .projects-container {
-    position: absolute;
-    top: 70%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    padding: 20px;
-    overflow-x: auto; 
+    width: 80%;
+    margin-top: 30px;
 }
 
 .project-card {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
     cursor: pointer;
-    width: 250px; 
+    width: 300px; /* Largeur fixe */
+    height: 200px; /* Hauteur fixe */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 
 .project-card:hover {
     transform: scale(1.05);
@@ -402,6 +425,7 @@ body.page-projets h1 {
     color: white; 
     text-decoration: none;
 }
+
 
 /* Style spécifique à la page contact */
 body.page-contact h1 {
