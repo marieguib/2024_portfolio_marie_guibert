@@ -225,7 +225,6 @@ footer {
 
 
 /* Style spécifique à la page formations */ 
-/* --- Section titre avec le bouton ou la flèche --- */
 .hero-section {
     position: relative;
     display: flex;
@@ -455,6 +454,35 @@ footer {
 .menu-data-science a:hover {
     background-color: #34495e; /* Couleur de fond au survol */
 }
+
+.retour-buttons-container {
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    gap: 20px; /* Espacement entre les boutons */
+    justify-content: center; /* Centrer les boutons dans le conteneur */
+}
+
+
+.retour-accueil, .retour-projets {
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.retour-accueil:hover, .retour-projets:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.retour-accueil a, .retour-projets a {
+    color: white;
+    text-decoration: none;
+}
+
+
 
 
 
