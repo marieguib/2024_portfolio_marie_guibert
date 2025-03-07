@@ -8,6 +8,11 @@
 }
 
 /* Corps de la page */
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -431,22 +436,23 @@ footer {
 .menu-data-science {
     margin-top: 50px; /* Marge au-dessus du menu */
     display: flex;
-    gap: 40px;
+    gap: 50px;
     justify-content: center;
     background-color: #2c3e50;
     padding: 15px 0;
+    width: 100%;
 }
 
-.nouveau-menu-horizontal a {
+.menu-data-science a{
     color: #ecf0f1; /* Couleur du texte */
     text-decoration: none;
-    padding: 12px 25px;
+    padding: 12px 20px;
     font-size: 18px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.nouveau-menu-horizontal a:hover {
+.menu-data-science a:hover {
     background-color: #34495e; /* Couleur de fond au survol */
 }
 
