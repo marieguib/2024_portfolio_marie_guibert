@@ -17,8 +17,9 @@
     </div>
 </header>
 
-<body class="page-projets-data-science">
+<body class="page-projets">
 
+    <!--  Menu de navigation -->
     <div class="menu-icon" onclick="toggleMenu()">
         <img src="data/logos/logo_menu.svg" alt="logo_menu">
     </div>
@@ -33,15 +34,58 @@
 
     <script>
         function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('active');
+        const menu = document.getElementById('menu');
+        const menuIcon = document.querySelector('.menu-icon');
+        menu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
         }
     </script>
 
-    <h1>Projets Data Science et Modélisation statistique</h1>
+    <!-- Menu horizontal -->
+    <div class="menu-data-science">
+        <nav class="nouveau-menu-horizontal">
+            <a href="#ml">Machine Learning</a>
+            <a href="#clustering">Clustering</a>
+            <a href="#visu">Visualisation de données</a>
+            <a href="#webscraping">Web Scraping</a>
+            <a href="#econometrie">Econométrie</a>
+        </nav>
+    </div>
+
+    <!-- Contenu de la page -->
+    <div id="ml">
+        <h2>Machine Learning</h2>
+        <p>Contenu de la catégorie 1...</p>
+    </div>
+
+    <!-- Section Catégorie 2 -->
+    <div id="clustering">
+        <h2>Clustering</h2>
+        <p>Contenu de la catégorie 2...</p>
+    </div>
+
+    <!-- Section Catégorie 3 -->
+    <div id="visu">
+        <h2>Visualisation de données</h2>
+        <p>Contenu de la catégorie 3...</p>
+    </div>
+
+    <!-- Section Catégorie 4 -->
+    <div id="webscraping">
+        <h2>Web Scraping</h2>
+        <p>Contenu de la catégorie 4...</p>
+    </div>
+
+    <!-- Section Catégorie 5 -->
+    <div id="econometrie">
+        <h2>Econométrie appliquée</h2>
+        <p>Contenu de la catégorie 5...</p>
+    </div>
 
 
 
+
+    <!--  Footer -->
     <footer>
         <div class="footer-content">
             <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>
@@ -54,6 +98,28 @@
         </div>
     </footer>
 
-</body>
+    <!--  Arrière plan-->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 2 },
+                move: { speed: 1 },
+                line_linked: { enable: true, opacity: 0.5 }
+            }
+        });
+        
+        // Fonction de défilement fluide vers la section de projet
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth' // pour un défilement fluide
+            });
+        }
 
+        </script>
+</body>
 </html>
