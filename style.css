@@ -575,9 +575,110 @@ footer {
 }
 
 
+/* Style spécifique à la page expériences */
+* { box-sizing: border-box; }
 
 
+/* Frise chronologique */
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
 
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 40px 60px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: auto;
+    border-radius: 10px;
+  }
+
+.timeline:after { /* Ligne verticale */
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 8px;
+    background: grey;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.timeline article { /* Événement */
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    width: calc( 50% - 20px );
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.timeline article + article { /* Espacement entre les événements */
+    margin-top: 20px;
+}
+
+
+.timeline article:before { /* Point de connexion */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc( 100% + 26px );
+    background: #d6d6d6;
+    width: 24px;
+    height: 24px;
+    border: 6px grey solid;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline article:after { /* Flèche horizontale */
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 16px solid #eeeeee;
+    border-bottom: 20px solid transparent;
+}
+
+.timeline article:nth-child(even) { /* Alignement à droite */
+    margin-left: calc( 50% + 48px );
+}
+
+.timeline article:nth-child(even):before { /* Point de connexion à droite */
+    left: auto;
+    right: calc( 100% + 26px );
+}
+
+.timeline article:nth-child(even):after { /* Flèche horizontale à droite */
+    left: auto;
+    right: 100%;
+    border-left: none;
+    border-right: 16px solid #eeeeee;
+}
+
+.timeline article h3 { /* Titre */
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.timeline article p { /* Description */
+    margin: 10px 0;
+}
+
+.timeline article ul li{
+    list-style: none;
+} 
 
 /* Style spécifique à la page contact */
 body.page-contact h1 {
