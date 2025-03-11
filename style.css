@@ -8,11 +8,6 @@
 }
 
 /* Corps de la page */
-body, html {
-    height: 100%;
-    width: 100%;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -433,7 +428,7 @@ footer {
 /* Style spécifique à la page projets Data Science */
 
 .menu-data-science {
-    margin-top: 50px; /* Marge au-dessus du menu */
+    margin-top: 30px; /* Marge au-dessus du menu */
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -481,6 +476,70 @@ footer {
     color: white;
     text-decoration: none;
 }
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alignement à gauche */
+    text-align: left;
+    max-width: 90%; /* Ajuste la largeur max */
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Ajoute un fond léger */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.project-section h2, 
+.project-section h3, 
+.project-section h4 {
+    text-align: left; 
+    margin-bottom: 10px;
+}
+
+.project-section h2 {
+    font-size: 1.8rem; /* Taille du titre */
+    margin-bottom: 10px; /* Ajoute de l'espace en bas du titre */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.project-section h3 {
+    font-size: 1.2rem; /* Taille du sous-titre */
+}
+
+
+.project-section ul {
+    padding-left: 20px; /* Décale la liste pour un bon alignement */
+    list-style: disc;
+}
+
+.project-section p {
+    margin-bottom: 15px; /* Ajoute de l'espace entre les paragraphes */
+}
+
+.projet {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.projet:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+
 
 
 
