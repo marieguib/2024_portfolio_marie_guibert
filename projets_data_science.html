@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Marie Guibert</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <div class="name">
+            <a href="page_accueil.html">Marie Guibert</a>
+        </div>
+    </div>
+</header>
+
+<body class="page-projets">
+
+    <!--  Menu de navigation -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="data/logos/logo_menu.svg" alt="logo_menu">
+    </div>
+    <div class="menu" id="menu">
+        <a href="page_accueil.html">Accueil</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="formations.html">Formations</a>
+        <a href="experiences.html">Expériences</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+        const menu = document.getElementById('menu');
+        const menuIcon = document.querySelector('.menu-icon');
+        menu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+        }
+    </script>
+
+    <!--  Section titre -->
+    <section class="hero-section-projects">
+        <h1>Data Science</h1>
+        <div class="separator"></div>
+    </section>
+
+    <!-- Menu horizontal -->
+    <div class="menu-data-science">
+        <nav class="nouveau-menu-horizontal">
+            <a href="#ml">Machine Learning</a>
+            <a href="#clustering">Clustering</a>
+            <a href="#visu">Visualisation de données</a>
+            <a href="#webscraping">Web Scraping</a>
+            <a href="#marketing">Marketing</a>
+            <a href="#econometrie">Econométrie</a>
+            <a href="#series-temp">Séries temporelles</a>
+        </nav>
+    </div>
+
+    <!-- Contenu de la page -->
+    <div id="ml" class="project-section">
+        <h2>🤖 Machine Learning</h2>
+    </div>
+    
+
+    <!-- Section Catégorie 2 -->
+    <div id="clustering" class="project-section">
+        <h2>🤖 Clustering</h2>
+        <div class="projet">
+            <h3><u>Classification des pays par développement</u></h3>
+            <p>Ce Projet classifie les pays selon leurs indicateurs économiques et sociaux en utilisant des techniques de clustering et d’analyse multivariée</p>
+            <p>Résultat :  Segmentation des pays en 5 groupes selon leur niveau de développement, avec un focus sur les pays les plus vulnérables nécessitant une aide humanitaire.</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Clustering : Kmeans, CAH</li>
+                <li>Analyse statistique avancée</li>
+                <li>Manipulation et nettoyage de données</li>
+                <li>Visualisation de données et statistiques descriptives </li>
+                <li>⚙️ Programmation en R (R Markdown)</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+                <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+                    <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+                </a>
+                <a href="data/projets/M1_MAS/projet_clustering_pays.pdf" download class="btn-telecharger">📥 Télécharger le compte rendu</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Catégorie 3 -->
+    <div id="visu" class="project-section">
+        <h2>📊 Visualisation de données</h2>
+        <p>Contenu de la catégorie 3...</p>
+    </div>
+
+    <!-- Section Catégorie 4 -->
+    <div id="webscraping" class="project-section">
+        <h2>🌐 Web Scraping</h2>
+        <div class="projet">
+            <h3><u>Cartographie des établissements de santé en France</u></h3>
+            <p>Ce projet explore la répartition et l’évolution des festivals de musique amplifiée et électronique en France, en combinant extraction de données via API, web scraping et analyse statistique.</p>
+            <p>Résultat : Mise en évidence des régions organisant le plus de festivals, des tendances saisonnières et des liens entre festivals officiels et populaires.</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Web scraping</li>
+                <li>Manipulation de données et nettoyage de données</li>
+                <li>Visualisation de Données</li>
+                <li>⚙️ Programmation en R (R Markdown)</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+                <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+                    <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="marketing" class="project-section">
+        <h2>🔎 Analyse de données</h2>
+        <div class="projet">
+            <h3><u>Cartographie des établissements de santé en France</u></h3>
+            <p>Ce projet vise à analyser les établissements de santé en France</p>
+            <p>Résultat : Mise en évidence des disparités régionales dans l’accès aux soins et des écarts de performance entre établissements publics et privés</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Analyse de données de santé</li>
+                <li>Analyse de données clients</li>
+                <li>Manipulation de données</li>
+                <li>Visualisation de données et statistiques descriptives </li>
+                <li>⚙️ Programmation en R (R Markdown)</li>
+            </ul>
+
+        </div>
+
+        <div class="projet">
+            <h3><u>Segmentation RFM des clients <i>(Marketing)</i></u></h3>
+            <p>Ce projet applique une segmentation RFM (Recency, Frequency, Monetary value) pour analyser les comportements d’achat des clientes d’une marque de lingerie</p>
+            <p>Résultat : Optimisation les stratégies marketing et de fidélisation</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Segmentation RFM</li>
+                <li>Analyse de données clients</li>
+                <li>Visualisation de données</li>
+                <li>⚙️ Programmation en Python</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section Catégorie 5 -->
+    <div id="econometrie" class="project-section">
+        <h2>💶 Econométrie appliquée</h2>
+        <div class="projet">
+            <h3><u>Analyse de l’impact des facteurs de risque sur le nombre de cancer en France</u></h3>
+            <p>Ce projet vise à analyser l’impact de facteurs de risque sur le nombre de cancer en France entre 1990 et 2016 en employant des méthodes d’économétrie</p>
+            <p>Résultat : Modélisation permettant de mieux comprendre l’influence des facteurs de risque sur la mortalité due au cancer, avec mise en évidence d’une rupture structurelle en 2004 dans l’évolution du taux d’obésité.</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Économétrie appliquée : régression multiple, tests de significativité (Student, Fisher)</li>
+                <li>Manipulation et nettoyage de données</li>
+                <li>Analyse temporelle des données</li>
+                <li>⚙️ Programmation en R</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+                <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+                    <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+                </a>
+                <a href="data/projets/L3_MIASHS/projet_econometrie_cancers.pdf" download class="btn-telecharger">📥 Télécharger le compte rendu</a>
+            </div>
+
+        </div>
+
+        <div class="projet">
+            <h3><u>Mesurer le bonheur : étude de l’Happy Planet Index</u></h3>
+            <p>Ce projet analyse les facteurs influençant le bonheur dans le monde à travers l’étude de l’Happy Planet Index (HPI)</p>
+            <p>Résultat : Mise en évidence des facteurs clés du bonheur.</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Modélisation économétrique (régression linéaire multiple, tests de significativité (Student, Fisher))</li>
+                <li>Manipulation de données</li>
+                <li>Analyse et visualisation de données</li>
+                <li>⚙️ Programmation en R</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+            <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+                <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+            </a>
+                <a href="data/projets/M1_MAS/projet_econometrie_HPI.pdf" download class="btn-telecharger">📥 Télécharger le compte rendu</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="series-temp" class="project-section">
+        <h2>📈 Séries temporelles</h2>
+        <div class="projet">
+            <h3><u>Prévision du nombre de mariages en France pour 2020</u></h3>
+            <p>Ce projet vise à analyser l'évolution du nombre de mariages en France entre 1996 et 2014</p>
+            <p>Résultat : Prévision du nombre de mariages en France pour 2020</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Analyse de séries temporelles</li>
+                <li>Manipulation et nettoyage de données</li>
+                <li>Statistiques et modélisation prédictive</li>
+                <li>⚙️ Programmation en R</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+                <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+                    <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+                </a>
+                <a href="data/projets/L3_MIASHS/projet_seriestemp_mariages.pdf" download class="btn-telecharger">📥 Télécharger le compte rendu</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton pour retourner au menu / projets -->
+    <div class="retour-buttons-container">
+        <a href="page_accueil.html" class="retour-accueil">Retour à l'Accueil</a>
+        <a href="projets.html" class="retour-projets">Retour aux Projets</a>
+    </div>
+    
+
+    <!--  Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>
+            <div class="reseaux_sociaux">
+            <a href="https://github.com/marieguib" target="_blank" class="github">
+            <img src="data/logos/logo_github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/marie-guibert-6653571a9" target="_blank" class="linkedin">
+            <img src="data/logos/logo_linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!--  Arrière plan-->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 2 },
+                move: { speed: 1 },
+                line_linked: { enable: true, opacity: 0.5 }
+            }
+        });
+        
+        // Fonction de défilement fluide vers la section de projet
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth' // pour un défilement fluide
+            });
+        }
+
+        </script>
+</body>
+</html>

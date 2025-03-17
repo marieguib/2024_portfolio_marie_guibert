@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+
+    
+    <title>Expériences - Marie Guibert</title>
+    
+</head>
+
+<body class="page-experiences">
+
+    <h1>Expériences</h1>
+    <div class="separator"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="name">
+                <a href="page_accueil.html">Marie Guibert</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!--  Menu de navigation -->
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="data/logos/logo_menu.svg" alt="logo_menu">
+    </div>
+    <div class="menu" id="menu">
+        <a href="page_accueil.html">Accueil</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="formations.html">Formations</a>
+        <a href="experiences.html">Expériences</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+        const menu = document.getElementById('menu');
+        const menuIcon = document.querySelector('.menu-icon');
+        menu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+        }
+    </script>
+
+    <!-- Contenu de la page -->
+    <!-- Bouton de téléchargement CV -->
+    <a href="data/CV Marie Guibert.pdf" class="download-cv" download style="margin-top: 0px";>Télécharger mon CV</a>
+
+
+    <div class="timeline">
+        <article>
+          <h2>Data Analyst</h2>
+          <p><i>Alternance</i></p>
+          <ul>
+            <li><span>Entreprise : </span>SGAR Bretagne</li>
+            <li><span>Lieu : </span>Rennes</li>
+            <li><span>Période : </span>09/2023 - 09/2024</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Data Scientist</h2>
+          <p><i>Stage</i></p>
+          <ul>
+            <li><span>Entreprise : </span>Pro BTP</li>
+            <li><span>Lieu : </span>Paris</li>
+            <li><span>Période : </span>04/2023 - 08/2023</li>
+        </ul>
+        </article>
+        <article>
+            <h2>Data Analyst</h2>
+            <p><i>Stage</i></p>
+            <ul>
+              <li><span>Entreprise : </span>Groupe Ovalt - Filière Build Data</li>
+              <li><span>Lieu : </span>Betton</li>
+              <li><span>Période : </span>05/2022 - 07/2022</li>
+          </ul>
+          </article>
+          <article>
+            <h2>Aide aux devoirs en mathématiques</h2>
+            <p>Soutien apportés à des élèves de collège et lycée</p>
+            <ul>
+              <li><span>Période : </span>09/2020 - 09/2024</li>
+          </ul>
+          </article>
+      </div>
+
+      
+
+
+    <!--  Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>
+            <div class="reseaux_sociaux">
+            <a href="https://github.com/marieguib" target="_blank" class="github">
+            <img src="data/logos/logo_github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/marie-guibert-6653571a9" target="_blank" class="linkedin">
+            <img src="data/logos/logo_linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!--  Arrière plan-->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 2 },
+                move: { speed: 1 },
+                line_linked: { enable: true, opacity: 0.5 }
+            }
+        });
+    </script>
+
+</body>
+</html>

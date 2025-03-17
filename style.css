@@ -1,0 +1,707 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 700;
+}
+
+/* Corps de la page */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap : 30px;
+    background: #0c192c;
+    min-height: 100vh;
+    overflow: scroll;
+    position: relative;
+    color: #ffffff;
+}
+
+/* Arrière-plan */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 50% 50%, #0c192c, #1a2b4c);
+    z-index: -1;
+}
+
+
+/* Titres */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.name a{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* Icone du menu */
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+/* Menu */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 25, 44, 0.9); 
+    color: white;
+    transition: right 0.6s ease;
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px 0 0 10px;
+
+    
+}
+
+/* Liens du menu */
+.menu a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 15px 0;
+    transition: color 0.6s ease;
+}
+
+.menu a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Quand le menu est actif */
+.menu.active {
+    right: 0;
+}
+
+.menu-icon.active img {
+    content: url('data/logos/logo_menu_close.svg'); 
+}
+
+
+/* Separateur */
+.separator {
+    height: 1px;
+    background-color: white;
+    width: 20%;
+    margin: 10px 0;
+    display: block;
+}
+
+/* Pied de page */
+footer {
+    position: fixed;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+}
+
+.email {
+    font-size: 1.2rem;
+    color: grey;
+    text-decoration: none;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+.reseaux_sociaux {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.github img,
+.linkedin img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.github:hover img,
+.linkedin:hover img {
+    transform: scale(1.2);
+}
+
+/* Style des pages */
+
+/* Style specifique à la page d'accueil */
+.presentation {
+    top: calc(35% + 100px); 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px; 
+    z-index: 50;
+}
+
+.categories {
+    display: flex;
+    gap: 40px; 
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #666666;
+}
+
+
+.category img {
+    width: 70px;
+    height: 70px;
+    padding: 10px; 
+}
+
+.category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.category p {
+    font-size: 1rem;
+    max-width: 200px;
+}
+
+
+
+/* Style spécifique à la page formations */ 
+.hero-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hauteur écran */
+    text-align: center;
+    position: relative;
+}
+
+/* --- Style du titre --- */
+.hero-section h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* --- Ligne sous le titre --- */
+.hero-section .separator {
+    height: 1px;
+    background-color: white;
+    width: 50%;
+    margin-top: 10px;
+}
+
+/* --- Bouton de téléchargement du CV --- */
+.download-cv {
+    margin-top: 60px;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.download-cv:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Flèche animée --- */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    font-size: 2rem;
+    color: white;
+    animation: bounce 1.5s infinite;
+}
+
+/* Animation de la flèche */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+.liste-formations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.formation {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.formation:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.formation h2, 
+.formation h3, 
+.formation h4 {
+    color: #ffffff;
+}
+
+.formation h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.formation h3 {
+    font-size: 1.2rem;
+}
+
+.formation h4 {
+    display: inline;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.formation .mention {
+    font-size: 1rem;
+    color: grey; 
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 5px 10px;
+    display: inline-block;
+    border: 2px dashed grey;
+    border-radius: 10px;
+}
+
+.formation details {
+    cursor: pointer;
+    margin-top: 10px;
+    color : grey;
+    text-align: left;
+}
+
+.formation details ul {
+    margin-top : 10px;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.formation details ul li {
+    margin-bottom: 10px; 
+} 
+
+.formation a {
+    color : grey;
+    font-size: 1rem;
+} 
+
+/* Style spécifique à la page projets */
+.hero-section-projects {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Style du titre --- */
+.hero-section-projects h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* --- Ligne sous le titre --- */
+.separator {
+    height: 1px;
+    background-color: white;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    cursor: pointer;
+    width: 300px; /* Largeur fixe */
+    height: 200px; /* Hauteur fixe */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+
+.project-card h2 {
+    margin : 20px 0 10px;
+}
+
+.project-card img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.project-card a {
+    font-size: 1rem;
+    color: white; 
+    text-decoration: none;
+}
+
+/* Style spécifique à la page projets Data Science */
+
+.menu-data-science {
+    margin-top: 30px; /* Marge au-dessus du menu */
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    background-color: #2c3e50;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.menu-data-science a{
+    color: #ecf0f1; /* Couleur du texte */
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-data-science a:hover {
+    background-color: #34495e; /* Couleur de fond au survol */
+}
+
+.retour-buttons-container {
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    gap: 20px; /* Espacement entre les boutons */
+    justify-content: center; /* Centrer les boutons dans le conteneur */
+}
+
+
+.retour-accueil, .retour-projets {
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.retour-accueil:hover, .retour-projets:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.retour-accueil a, .retour-projets a {
+    color: white;
+    text-decoration: none;
+}
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alignement à gauche */
+    text-align: left;
+    max-width: 90%; /* Ajuste la largeur max */
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Ajoute un fond léger */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.project-section h2, 
+.project-section h3, 
+.project-section h4 {
+    text-align: left; 
+    margin-bottom: 10px;
+}
+
+.project-section h2 {
+    font-size: 1.8rem; /* Taille du titre */
+    margin-bottom: 10px; /* Ajoute de l'espace en bas du titre */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.project-section h3 {
+    font-size: 1.2rem; /* Taille du sous-titre */
+}
+
+
+.project-section ul {
+    padding-left: 20px; /* Décale la liste pour un bon alignement */
+    list-style: disc;
+}
+
+.project-section p {
+    margin-bottom: 15px; /* Ajoute de l'espace entre les paragraphes */
+}
+
+.projet {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.projet:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.projet-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-github, .btn-telecharger {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-github {
+    background-color: #333;
+}
+
+.btn-telecharger {
+    background-color: #007BFF;
+}
+
+.btn-github:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.btn-telecharger:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+/* Style spécifique à la page expériences */
+* { box-sizing: border-box; }
+
+
+/* Frise chronologique */
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 40px 60px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: auto;
+    border-radius: 10px;
+  }
+
+.timeline:after { /* Ligne verticale */
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 8px;
+    background: grey;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.timeline article { /* Événement */
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    width: calc( 50% - 20px );
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.timeline article + article { /* Espacement entre les événements */
+    margin-top: 20px;
+}
+
+
+.timeline article:before { /* Point de connexion */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc( 100% + 26px );
+    background: #d6d6d6;
+    width: 24px;
+    height: 24px;
+    border: 6px grey solid;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline article:after { /* Flèche horizontale */
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 16px solid #eeeeee;
+    border-bottom: 20px solid transparent;
+}
+
+.timeline article:nth-child(even) { /* Alignement à droite */
+    margin-left: calc( 50% + 48px );
+}
+
+.timeline article:nth-child(even):before { /* Point de connexion à droite */
+    left: auto;
+    right: calc( 100% + 26px );
+}
+
+.timeline article:nth-child(even):after { /* Flèche horizontale à droite */
+    left: auto;
+    right: 100%;
+    border-left: none;
+    border-right: 16px solid #eeeeee;
+}
+
+.timeline article h3 { /* Titre */
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.timeline article p { /* Description */
+    margin: 10px 0;
+}
+
+.timeline article ul li{
+    list-style: none;
+} 
+
+/* Style spécifique à la page contact */
+body.page-contact h1 {
+    position: absolute;
+    top: calc(35% + 100px); 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+body.page-contact section {
+    position: absolute;
+    top: calc(55% + 100px); /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    color: #666666;
+}
+
+
+body.page-contact a:hover {
+    text-decoration: underline;
+}
