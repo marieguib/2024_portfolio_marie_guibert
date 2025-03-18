@@ -36,6 +36,7 @@ body {
 
 /* Titres */
 h1 {
+    margin-top: 8%;
     font-size: 3rem;
     text-align: center;
 }
@@ -82,8 +83,6 @@ header {
     padding-top: 50px;
     backdrop-filter: blur(10px);
     border-radius: 10px 0 0 10px;
-
-    
 }
 
 /* Liens du menu */
@@ -405,7 +404,7 @@ footer {
 /* Style spécifique à la page projets Data Science */
 
 .menu-data-science {
-    margin-top: 30px; /* Marge au-dessus du menu */
+    margin-top: 10px; /* Marge au-dessus du menu */
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -513,7 +512,7 @@ footer {
 .projet:hover {
     transform: scale(1.02);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-    padding: 10px;
+    padding: 20px;
 }
 
 .projet-buttons {
@@ -576,6 +575,7 @@ footer {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
+
 
 .timeline:after { /* Ligne verticale */
     content: "";
@@ -659,27 +659,18 @@ footer {
 } 
 
 /* Style spécifique à la page contact */
-body.page-contact h1 {
-    position: absolute;
-    top: calc(35% + 100px); 
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-body.page-contact section {
-    position: absolute;
-    top: calc(55% + 100px); /* Adjust as needed */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f9f9f9;
+.contact-container {
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
+    margin-bottom: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    color: #666666;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
-
-body.page-contact a:hover {
-    text-decoration: underline;
+.contact-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
 }
