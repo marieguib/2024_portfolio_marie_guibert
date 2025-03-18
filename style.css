@@ -49,6 +49,12 @@ header {
     z-index: 100;
 }
 
+header :hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition : transform 0.2s ease;
+}
+
 .name a{
     font-size: 1.2rem;
     color: white;
@@ -164,7 +170,7 @@ footer {
 
 .github:hover img,
 .linkedin:hover img {
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 
 /* Style des pages */
@@ -673,4 +679,13 @@ footer {
     transform: scale(1.02);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
     padding: 20px;
+}
+
+.contact-container a {
+    color: white;
+    font-style: italic;
+}
+
+.contact-container a:hover {
+    color: grey;
 }
