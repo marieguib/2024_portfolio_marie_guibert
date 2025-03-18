@@ -545,7 +545,7 @@ footer {
     margin-top: 10px;
 }
 
-.btn-github, .btn-telecharger {
+.btn-github, .btn-telecharger, .btn-url-app {
     display: inline-block;
     padding: 10px 15px;
     font-size: 1rem;
@@ -571,6 +571,16 @@ footer {
 
 .btn-telecharger:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-url-app {
+    background-color: darkslateblue;
+    transform: scale(1.05);
+}
+
+.btn-url-app:hover {
+    background-color: slateblue;
     transform: scale(1.05);
 }
 
