@@ -17,7 +17,7 @@ body {
     gap : 30px;
     background: #0c192c;
     min-height: 100vh;
-    overflow: scroll;
+    overflow: auto;
     position: relative;
     color: #ffffff;
 }
@@ -241,7 +241,7 @@ footer {
 .hero-section .separator {
     height: 1px;
     background-color: white;
-    width: 100%;
+    width: 70%;
     margin-top: 10px;
 }
 
@@ -576,15 +576,6 @@ footer {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
-
-.timeline {
-    position: relative;
-    margin: 0 auto;
-    padding: 40px 60px;
-    background: rgba(255, 255, 255, 0.1);
-    overflow: auto;
-    border-radius: 10px;
-  }
 
 .timeline:after { /* Ligne verticale */
     content: "";
