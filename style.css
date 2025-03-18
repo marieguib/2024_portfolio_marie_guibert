@@ -241,7 +241,7 @@ footer {
 .hero-section .separator {
     height: 1px;
     background-color: white;
-    width: 50%;
+    width: 100%;
     margin-top: 10px;
 }
 
@@ -355,29 +355,6 @@ footer {
 } 
 
 /* Style spécifique à la page projets */
-.hero-section-projects {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* --- Style du titre --- */
-.hero-section-projects h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-/* --- Ligne sous le titre --- */
-.separator {
-    height: 1px;
-    background-color: white;
-    width: 50%;
-    margin-top: 10px;
-}
-
 .projects-container {
     display: flex;
     justify-content: center;
