@@ -14,13 +14,14 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap : 30px;
-    background: #0c192c;
+    gap: 30px;
+    background: #0c192c; /* Arrière-plan plus sombre pour garder une ambiance calme */
     min-height: 100vh;
     overflow: auto;
     position: relative;
     color: #ffffff;
 }
+
 
 /* Arrière-plan */
 #particles-js {
@@ -29,9 +30,10 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: radial-gradient(circle at 50% 50%, #0c192c, #1a2b4c);
+    background: radial-gradient(circle at 50% 50%, #0c192c, #1a2b4c); /* Gradient plus doux pour l'arrière-plan */
     z-index: -1;
 }
+
 
 
 /* Titres */
@@ -70,7 +72,13 @@ header :hover {
     height: 30px;
     cursor: pointer;
     z-index: 200;
+    transition: transform 0.3s ease; /* Ajout d'une animation douce pour l'icône */
 }
+
+.menu-icon:hover {
+    transform: scale(1.2); /* Animation au survol */
+}
+
 
 /* Menu */
 .menu {
@@ -129,13 +137,16 @@ footer {
     position: fixed;
     color: white;
     text-align: center;
-    padding: 10px 20px;
+    padding: 20px 20px;
     bottom: 0;
     width: 100%;
     z-index: 1;
     display: flex;
     align-items: center;
+    background: rgba(0, 0, 0, 0.3); /* Fond sombre pour bien délimiter le footer */
+    border-top: 1px solid grey; /* Ajout d'une légère bordure pour séparer visuellement */
 }
+
 
 .footer-content {
     display: flex;
@@ -222,6 +233,118 @@ footer {
     max-width: 200px;
 }
 
+/* Style spécifique à la page Qui suis-je ? */
+.intro, .personnalite, .competences, .contact {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* Intro Section */
+.intro {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    display: flex;
+    align-items: left;
+    text-align: left;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: cornflowerblue;
+}
+
+.intro-content {
+    display: flex;
+}
+
+.intro-image {
+    width: 150px;
+    margin-right: 30px;
+}
+
+/* Personnalite Section */
+.personnalite {
+    padding: 40px;
+    background-color: rgba(173, 216, 230, 0.3); 
+    border-radius: 8px;
+    align-items: right;
+    text-align: right;
+}
+
+.personnalite h3 {
+    font-size: 1.8rem;
+    color: rgba(19, 162, 143, 0.8);
+    margin-bottom: 10px;
+}
+
+/* Competences Section */
+.competences {
+    padding: 40px;
+    background-color:  rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    align-items: left;
+    text-align: left;
+}
+
+.competences h3 {
+    font-size: 2rem;
+    color: cornflowerblue;
+    margin-bottom:10px;
+}
+
+.competences-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.competence h4 {
+    font-size: 1.6rem;
+    color: rgb(170, 195, 238);
+    margin-bottom: 20px;
+}
+
+.competence ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.competence li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.competence img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+
+/* Contact Section */
+.contact {
+    background-color: rgba(173, 216, 230, 0.3);
+    padding: 40px;
+    border-radius: 8px;
+    align-items: right;
+    text-align: right;
+}
+
+.contact h3 {
+    font-size: 2rem;
+    color: rgba(19, 162, 143, 0.8);
+    margin-bottom: 10px;
+}
+
+.btn-contact {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #005988;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
 
 
 /* Style spécifique à la page formations */ 
@@ -370,11 +493,11 @@ footer {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1); 
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
     cursor: pointer;
     width: 300px; /* Largeur fixe */
     height: 200px; /* Hauteur fixe */
@@ -385,9 +508,16 @@ footer {
     text-align: center;
 }
 
-
 .project-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.project-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px; 
 }
 
 
@@ -395,11 +525,6 @@ footer {
     margin : 20px 0 10px;
 }
 
-.project-card img{
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-}
 
 .project-card a {
     font-size: 1rem;
@@ -447,11 +572,12 @@ footer {
     font-size: 1.2rem;
     text-decoration: none;
     color: white;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .retour-accueil:hover, .retour-projets:hover {
     background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
 }
 
 .retour-accueil a, .retour-projets a {
@@ -677,9 +803,10 @@ footer {
 
 .contact-container:hover {
     transform: scale(1.02);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); 
     padding: 20px;
 }
+
 
 .contact-container a {
     color: white;
