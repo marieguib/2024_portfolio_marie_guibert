@@ -46,6 +46,29 @@
     </script>
 
     <!-- Contenu de la page -->
+     <div class="memoire-container">
+        <div class="memoire-text">
+            <h2><u>Comprendre l’influence de certains facteurs sur la demande de financements des communes en Bretagne</u></h2>
+            <p>DESCRIPTION A AJOUTER</p>
+        </div>
+        <div class="memoire-image">
+            <img src="data/projets/Memoire/carte_interactive_proba_communes.png" alt="Photo_Memoire" onclick="openLightbox(this)">
+        </div>
+    </div>
+    
+    <div class="projet-buttons" style="margin-top: 0px;">
+            <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+                <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+            </a>
+            <a href="data/projets/Memoire/Rapport_GUIBERT_Marie.pdf" download class="btn-telecharger">📥 Télécharger mon mémoire</a>
+        </div> 
+
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+
 
     
 
@@ -82,6 +105,15 @@
                 top: section.offsetTop,
                 behavior: 'smooth' // pour un défilement fluide
             });
+        }
+
+        function openLightbox(img) {
+            document.getElementById("lightbox-img").src = img.src;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
         }
 
         </script>
