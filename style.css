@@ -132,9 +132,10 @@ header :hover {
     margin: 10px 0;
     display: block;
 }
+
 /* Pied de page */
 footer {
-    position: fixed;
+    position: relative;
     color: white;
     text-align: center;
     padding: 20px 20px;
@@ -145,6 +146,7 @@ footer {
     align-items: center;
     background: rgba(0, 0, 0, 0.3); /* Fond sombre pour bien délimiter le footer */
     border-top: 1px solid grey; /* Ajout d'une légère bordure pour séparer visuellement */
+    margin-top: auto;
 }
 
 
@@ -557,7 +559,7 @@ footer {
     background-color: #34495e; /* Couleur de fond au survol */
 }
 
-.retour-buttons-container {
+.our-buttons-container {
     display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
     gap: 20px; /* Espacement entre les boutons */
     justify-content: center; /* Centrer les boutons dans le conteneur */
@@ -696,22 +698,6 @@ footer {
 
 .memoire-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 80%;
-    margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.memoire-container {
-    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
@@ -719,7 +705,7 @@ footer {
     margin-top: 30px;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -729,6 +715,33 @@ footer {
 .memoire-text {
     text-align: left;
     flex: 1;
+}
+
+.details-memoire-etapes, .details-memoire-competences {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 47%;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.details-memoire {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.details-memoire h3 {
+    font-size: 1.4rem;
+    color: white;
 }
 
 .memoire-image img {
@@ -743,6 +756,39 @@ footer {
 .memoire-image img:hover {
     transform: scale(1.05);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.memoire-text h2{
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.memoire-text h3{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-style: italic;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.memoire-text h4{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+    
+}
+
+.memoire-text p{
+    color: white;
+}
+
+.details-memoire-etapes ul li{
+    margin-bottom:10px;
+}
+
+.details-memoire-competences ul li{
+    margin-bottom:10px;
 }
 
 /* Style de base de la lightbox (invisible par défaut) */

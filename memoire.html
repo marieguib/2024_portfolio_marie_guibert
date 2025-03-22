@@ -19,7 +19,7 @@
 
 <body class="memoire">
 
-    <h1>Mémoire de fin de master MAS</h1>
+    <h1>Mémoire de fin de master</h1>
     <div class="separator"></div>
 
 
@@ -46,23 +46,66 @@
     </script>
 
     <!-- Contenu de la page -->
+    <div class="projet-buttons" style="margin-top: 0px;">
+        <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+            <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+        </a>
+        <a href="data/projets/Memoire/Rapport_GUIBERT_Marie.pdf" download class="btn-telecharger">📥 Télécharger mon mémoire</a>
+    </div>
+
      <div class="memoire-container">
         <div class="memoire-text">
             <h2><u>Comprendre l’influence de certains facteurs sur la demande de financements des communes en Bretagne</u></h2>
-            <p>DESCRIPTION A AJOUTER</p>
+            <h3>💡 <u>Objectif</u> : Comprendre les facteurs influençant la demande de financements publics des communes en Bretagne, avec un focus sur les subventions liées à la transition écologique.</h3>
+            <h4> 🎯 Pourquoi ce projet ?</h4>
+            <p>🔍 Impact concret : Optimisation des politiques publiques grâce aux données.</p>
+            <p>💡 Compétences transverses : Data science et applications métier réelles.</p>
+            <p>📊 Application à divers secteurs : Analyse prédictive, aide à la décision, gestion des ressources.</p>
         </div>
+
         <div class="memoire-image">
             <img src="data/projets/Memoire/carte_interactive_proba_communes.png" alt="Photo_Memoire" onclick="openLightbox(this)">
         </div>
     </div>
+
     
-    <div class="projet-buttons" style="margin-top: 0px;">
-            <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
-                <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
-            </a>
-            <a href="data/projets/Memoire/Rapport_GUIBERT_Marie.pdf" download class="btn-telecharger">📥 Télécharger mon mémoire</a>
+    <div class="details-memoire">
+        <div class="details-memoire-etapes">
+        <h3>Etapes du projet</h3>
+        <p>
+            <ul style="list-style-type:none;">
+                <li>🔹 Collecte & Préparation des Données : Fusion et traitement de multiples sources.</li>
+                <li>🔹 Exploration & Visualisation : Création de tableaux de bord interactifs avec Apache Superset.</li>
+                <li>🔹 Modélisation Machine Learning :</li>
+                <ul style="margin-left: 40px;list-style-type:disc;">
+                    <li>Régression logistique</li>
+                    <li>Forêts aléatoires</li>
+                    <li>Boosting (Gradient Boosting, Adaboost)</li>
+                    <li>Techniques de rééquilibrage des données (SMOTE, ADASYN)</li>
+                </ul>
+                <li>🔹 Interprétation & Recommandations : Identification des variables clés influençant l’accès aux financements.</li>
+            </ul>
+        </p>
         </div> 
 
+        <div class="details-memoire-competences">
+        <h3>Compétences acquises</h3>     
+        <p>
+            <ul style="list-style-type:none;">
+                <li>✅ Data Science & Machine Learning</li>
+                <li>✅ Programmation : Python (Scikit-learn, Pandas), R</li>
+                <li>✅ Traitement & Analyse de Données</li>
+                <li>✅ Visualisation : Tableaux de bord dynamiques, statistiques exploratoires</li>
+                <li>✅ Communication : Interaction avec experts métiers et acteurs publics</li>
+                <li>✅ Vulgarisation : Explication des résultats obtenus dans un contexte compréhensible pour les non-spécialistes de la donnée</li>
+            </ul>
+        </p>
+        </div>  
+    </div>
+
+
+    
+   
 
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
