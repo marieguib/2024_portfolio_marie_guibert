@@ -272,12 +272,20 @@ footer {
     border-radius: 8px;
     align-items: right;
     text-align: right;
+    text-align: justify;
 }
 
 .personnalite h3 {
     font-size: 1.8rem;
-    color: rgba(19, 162, 143, 0.8);
+    color: cornflowerblue;
     margin-bottom: 10px;
+}
+
+.personnalite h4 {
+    font-size: 1.6rem;
+    color: rgb(170, 195, 238);
+    margin-bottom: 10px;
+    margin-top: 10px;;
 }
 
 /* Competences Section */
@@ -333,7 +341,7 @@ footer {
 
 .contact h3 {
     font-size: 2rem;
-    color: rgba(19, 162, 143, 0.8);
+    color: cornflowerblue;
     margin-bottom: 10px;
 }
 
@@ -342,10 +350,11 @@ footer {
     padding: 12px 25px;
     font-size: 1.2rem;
     color: #fff;
-    background-color: #005988;
+    background-color: rgb(170, 195, 238);
     text-decoration: none;
     border-radius: 4px;
     margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 
