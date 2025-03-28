@@ -278,14 +278,15 @@ footer {
 .personnalite h3 {
     font-size: 1.8rem;
     color: cornflowerblue;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .personnalite h4 {
     font-size: 1.6rem;
     color: rgb(170, 195, 238);
     margin-bottom: 10px;
-    margin-top: 10px;;
+    margin-top: 10px;
 }
 
 /* Competences Section */
@@ -300,29 +301,41 @@ footer {
 .competences h3 {
     font-size: 2rem;
     color: cornflowerblue;
-    margin-bottom:10px;
-}
-
-.competences-content {
-    display: flex;
-    justify-content: space-between;
+    margin-bottom:20px;
+    text-align: center;
 }
 
 .competence h4 {
     font-size: 1.6rem;
     color: rgb(170, 195, 238);
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.competences-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  /* Ajoute un peu d'espacement entre les colonnes */
+}
+
+.competence {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05); /* Léger fond pour chaque colonne */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajout d'un ombrage subtil */
+    flex:1;
 }
 
 .competence ul {
-    list-style: none;
-    padding-left: 0;
+    padding-left: 15px;
+    margin-top: 10px;
 }
 
 .competence li {
     font-size: 1.1rem;
-    margin: 10px 0;
+    margin: 8px 0;  /* Réduit l'espacement entre les éléments */
 }
+
 
 .competence img {
     width: 20px;
@@ -336,7 +349,7 @@ footer {
     padding: 40px;
     border-radius: 8px;
     align-items: right;
-    text-align: right;
+    text-align: center;
 }
 
 .contact h3 {
