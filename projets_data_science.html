@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Marie Guibert</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <div class="name">
+            <a href="page_accueil.html">Marie Guibert</a>
+        </div>
+    </div>
+</header>
+
+<body class="page-projets">
+
+    <!--  Menu de navigation -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="data/logos/logo_menu.svg" alt="logo_menu">
+    </div>
+    <div class="menu" id="menu">
+        <a href="page_accueil.html">Accueil</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="formations.html">Formations</a>
+        <a href="experiences.html">Expériences</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+        const menu = document.getElementById('menu');
+        const menuIcon = document.querySelector('.menu-icon');
+        menu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+        }
+    </script>
+
+    <!--  Section titre -->
+    <h1>Data Science</h1>
+    <div class="separator"></div>
+
+    <!-- Menu horizontal -->
+    <div class="menu-data-science">
+        <nav class="nouveau-menu-horizontal">
+            <a href="#ml">Machine Learning</a>
+            <a href="#clustering">Clustering</a>
+            <a href="#marketing">Marketing</a>
+            <a href="#econometrie">Econométrie</a>
+            <a href="#series-temp">Séries temporelles</a>
+        </nav>
+    </div>
+
+    <!-- Contenu de la page -->
+    <!-- Bouton pour retourner au menu / projets -->
+    <div class="retour-buttons-container">
+        <a href="page_accueil.html" class="retour-accueil">Retour à l'Accueil</a>
+        <a href="projets.html" class="retour-projets">Retour aux Projets</a>
+    </div>
+
+    <div id="ml" class="project-section">
+        <h2>🤖 Machine Learning</h2>
+        <h3><u>Modélisation statistique (scoring) analysant les facteurs influençant les demandes de financement écologique des
+            communes en Bretagne</u></h3>
+        <p></p>
+        <p>Cliquez <a href="memoire.html" style="color: inherit;">ici</a> pour accéder à mon projet de mémoire.</p>
+        </div>
+    </div>
+    
+
+    <!-- Section Catégorie 2 -->
+    <div id="clustering" class="project-section">
+        <h2>🤖 Clustering</h2>
+        <div class="projet">
+            <h3><u>Classification des pays par développement</u></h3>
+            <p>Ce Projet classifie les pays selon leurs indicateurs économiques et sociaux en utilisant des techniques de clustering et d’analyse multivariée afin de pouvoir établir un "ordre" d'aide des pays et de faciliter la répartition du budget alloué.</p>
+            <p>Résultat :  Segmentation des pays en 5 groupes selon leur niveau de développement, avec un focus sur les pays les plus vulnérables nécessitant une aide humanitaire.</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Clustering : Kmeans, CAH</li>
+                <li>Analyse statistique avancée</li>
+                <li>Manipulation et nettoyage de données</li>
+                <li>Visualisation de données et statistiques descriptives </li>
+                <li>⚙️ Programmation en R (R Markdown)</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+                <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+                    <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+                </a>
+                <a href="data/projets/M1_MAS/projet_clustering_pays.pdf" download class="btn-telecharger">📥 Télécharger le compte rendu</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Catégorie 3 -->
+    <div id="visu" class="project-section">
+        <h2>📊 Visualisation de données</h2>
+        <div class="projet">
+            <h3><u>Application Web sur les données de la NBA</u></h3>
+            <p>Ce projet est une application web interactive permettant d’explorer les statistiques des équipes et des joueurs de la NBA entre 1978 et 2015. 
+                Grâce à des visualisations dynamiques, des cartes interactives et des analyses statistiques, l'application offre une exploration approfondie des performances des équipes et des joueurs au fil des saisons.</p>
+            <p><u>Note</u> : Ce projet a été réaliser afin de finaliser ma licence MIASHS (Mathématiques et Informatique Appliqués aux Sciences Humaines et Scoiales).</p>
+                
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Manipulation et nettoyage de données</li>
+                <li>Visualisation de données et statistiques descriptives</li>
+                <li>⚙️ Programmation en R Shiny (apprentissage en autonomie)</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+                <a href="https://github.com/marieguib/2021_TER" target="_blank" class="btn-github">
+                    <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+                </a>
+                <a href="https://marieguib.shinyapps.io/2022_TER/" download class="btn-url-app">🔗 Lien de l'application</a>
+            </div>
+        </div>
+
+        <div class="projet">
+            <h3><u>Application Web sur les inégalités dans le milieu scolaire</u></h3>
+            <p>...A COMPLETER...</p>
+
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Manipulation et nettoyage de données</li>
+                <li>Visualisation de données et statistiques descriptives</li>
+                <li>⚙️ Programmation en R Shiny</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+                <a href="https://github.com/marieguib/2021_TER" target="_blank" class="btn-github">
+                    <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+                </a>
+                <a href="https://marieguib.shinyapps.io/les_inegalites_dans_le_milieu_scolaire/" download class="btn-url-app">🔗 Lien de l'application</a>
+            </div>
+        </div>
+
+        <div class="projet">
+            <h3><u>Visualisation de données de la région Bretagne</u></h3>
+            <p> ...A COMPLETER...</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Manipulation et nettoyage de données</li>
+                <li>Visualisation de données et statistiques descriptives</li>
+                <li>⚙️ Programmation en Python (Bokeh)</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+                <a href="https://github.com/marieguib/2023_Visualisation_python-bokeh" target="_blank" class="btn-github">
+                    <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Section Catégorie 4 -->
+
+    <div id="marketing" class="project-section">
+        <h2>🛍️ Marketing</h2>
+        <div class="projet">
+            <h3><u>Segmentation RFM des clients</u></h3>
+            <p>Ce projet applique une segmentation RFM (Recency, Frequency, Monetary value) pour analyser les comportements d’achat des clientes d’une marque de lingerie</p>
+            <p>Résultat : Optimisation les stratégies marketing et de fidélisation</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Segmentation RFM</li>
+                <li>Analyse de données clients</li>
+                <li>Visualisation de données</li>
+                <li>⚙️ Programmation en Python</li>
+            </ul>
+        <!-- Boutons -->
+        <div class="projet-buttons">
+            <a href="https://github.com/marieguib/2023_marketing_segmentation-clients-RFM" target="_blank" class="btn-github">
+                <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+            </a>
+            <a href="data/projets/M1_MAS/projet_marketing_segmentation_rfm.pdf" download class="btn-telecharger">📥 Télécharger la présentation</a>
+            
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Section Catégorie 5 -->
+    <div id="econometrie" class="project-section">
+        <h2>💶 Econométrie appliquée</h2>
+        <div class="projet">
+            <h3><u>Mesurer le bonheur : étude de l’Happy Planet Index</u></h3>
+            <p>Ce projet analyse les facteurs influençant le bonheur dans le monde à travers l’étude de l’Happy Planet Index (HPI)</p>
+            <p>Résultat : Mise en évidence des facteurs clés du bonheur.</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Modélisation économétrique (régression linéaire multiple, tests de significativité (Student, Fisher))</li>
+                <li>Manipulation de données</li>
+                <li>Analyse et visualisation de données</li>
+                <li>⚙️ Programmation en R</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+            <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+                <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+            </a>
+                <a href="data/projets/M1_MAS/projet_econometrie_HPI.pdf" download class="btn-telecharger">📥 Télécharger le compte rendu</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="series-temp" class="project-section">
+        <h2>📈 Séries temporelles</h2>
+        <div class="projet">
+            <h3><u>Prévision du nombre de mariages en France pour 2020</u></h3>
+            <p>Ce projet vise à analyser l'évolution du nombre de mariages en France entre 1996 et 2014</p>
+            <p>Résultat : Prévision du nombre de mariages en France pour 2020</p>
+            <p>💡 Compétences techniques :</p>
+            <ul>
+                <li>Analyse de séries temporelles</li>
+                <li>Manipulation et nettoyage de données</li>
+                <li>Statistiques et modélisation prédictive</li>
+                <li>⚙️ Programmation en R</li>
+            </ul>
+
+            <!-- Boutons -->
+            <div class="projet-buttons">
+                <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+                    <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+                </a>
+                <a href="data/projets/L3_MIASHS/projet_seriestemp_mariages.pdf" download class="btn-telecharger">📥 Télécharger le compte rendu</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>
+            <div class="reseaux_sociaux">
+            <a href="https://github.com/marieguib" target="_blank" class="github">
+            <img src="data/logos/logo_github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/marie-guibert-6653571a9" target="_blank" class="linkedin">
+            <img src="data/logos/logo_linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!--  Arrière plan-->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 2 },
+                move: { speed: 1 },
+                line_linked: { enable: true, opacity: 0.5 }
+            }
+        });
+        
+        // Fonction de défilement fluide vers la section de projet
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth' // pour un défilement fluide
+            });
+        }
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html lang="fr">  
+<head>     
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Contact - Marie Guibert</title>     
+    <link rel="stylesheet" href="style.css">  
+</head>
+
+    <!-- Header --> 
+    <header>     
+        <div class="header-content">         
+            <div class="name">             
+                <a href="page_accueil.html">Marie Guibert</a>         
+            </div>     
+        </div> 
+    </header> 
+
+    
+    <body class="page-contact">  
+ 
+    <h1>Contactez-moi !</h1> 
+    <div class="separator"></div>
+
+   <!--  Menu de navigation -->
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="data/logos/logo_menu.svg" alt="logo_menu">
+    </div>
+    <div class="menu" id="menu">
+        <a href="page_accueil.html">Accueil</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="formations.html">Formations</a>
+        <a href="experiences.html">Expériences</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+        const menu = document.getElementById('menu');
+        const menuIcon = document.querySelector('.menu-icon');
+        menu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+        }
+    </script>  
+    
+    <!-- Contenu principal --> 
+    <div class="contact-container">             
+            <p>📩 Vous pouvez m'envoyer un email à <a href="mailto:marieguibert.mg@gmail.com">marieguibert.mg@gmail.com</a> !</p> 
+                <br>
+            <p>👥 Sinon, vous pouvez me contacter via LinkedIn sur <a href="https://www.linkedin.com/in/marie-guibert-6653571a9">ce lien</a></p>         
+    </div>     
+
+    
+    <!-- Pied de page -->
+    <footer>         
+        <div class="footer-content">             
+            <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>             
+            <div class="reseaux_sociaux">             
+                <a href="https://github.com/marieguib" target="_blank" class="github">             
+                    <img src="data/logos/logo_github.png" alt="GitHub">             
+                </a>             
+                <a href="https://www.linkedin.com/in/marie-guibert-6653571a9" target="_blank" class="linkedin">             
+                    <img src="data/logos/logo_linkedin.svg" alt="LinkedIn">             
+                </a>             
+            </div>         
+        </div>     
+    </footer>  
+
+    <!--  Arrière plan-->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 2 },
+                move: { speed: 1 },
+                line_linked: { enable: true, opacity: 0.5 }
+            }
+        });
+    </script>
+    
+</body>  
+</html>

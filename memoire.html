@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Marie Guibert</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <div class="name">
+            <a href="page_accueil.html">Marie Guibert</a>
+        </div>
+    </div>
+</header>
+
+<body class="memoire">
+
+    <h1>Mémoire de fin de master</h1>
+    <div class="separator"></div>
+
+
+    <!--  Menu de navigation -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="data/logos/logo_menu.svg" alt="logo_menu">
+    </div>
+    <div class="menu" id="menu">
+        <a href="page_accueil.html">Accueil</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="formations.html">Formations</a>
+        <a href="experiences.html">Expériences</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+        const menu = document.getElementById('menu');
+        const menuIcon = document.querySelector('.menu-icon');
+        menu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+        }
+    </script>
+
+    <!-- Contenu de la page -->
+    <div class="projet-buttons" style="margin-top: 0px;">
+        <a href="https://github.com/ton-depot" target="_blank" class="btn-github">
+            <img src="data/logos/logo_github.png" alt="GitHub" style="width: 20px; height: 20px;">  Voir sur GitHub
+        </a>
+        <a href="data/projets/Memoire/Rapport_GUIBERT_Marie.pdf" download class="btn-telecharger">📥 Télécharger mon mémoire</a>
+    </div>
+
+     <div class="memoire-container">
+        <div class="memoire-text">
+            <h2><u>Comprendre l’influence de certains facteurs sur la demande de financements des communes en Bretagne</u></h2>
+            <h3>💡 <u>Objectif</u> : Comprendre les facteurs influençant la demande de financements publics des communes en Bretagne, avec un focus sur les subventions liées à la transition écologique.</h3>
+            <h4> 🎯 Pourquoi ce projet ?</h4>
+            <p>🔍 Impact concret : Optimisation des politiques publiques grâce aux données.</p>
+            <p>💡 Compétences transverses : Data science et applications métier réelles.</p>
+            <p>📊 Application à divers secteurs : Analyse prédictive, aide à la décision, gestion des ressources.</p>
+        </div>
+
+        <div class="memoire-image">
+            <img src="data/projets/Memoire/carte_interactive_proba_communes.png" alt="Photo_Memoire" onclick="openLightbox(this)">
+        </div>
+    </div>
+
+    
+    <div class="details-memoire">
+        <div class="details-memoire-etapes">
+        <h3>Etapes du projet</h3>
+        <p>
+            <ul style="list-style-type:none;">
+                <li>🔹 Collecte & Préparation des Données : Fusion et traitement de multiples sources.</li>
+                <li>🔹 Exploration & Visualisation : Création de tableaux de bord interactifs avec Apache Superset.</li>
+                <li>🔹 Modélisation Machine Learning :</li>
+                <ul style="margin-left: 40px;list-style-type:disc;">
+                    <li>Régression logistique</li>
+                    <li>Forêts aléatoires</li>
+                    <li>Boosting (Gradient Boosting, Adaboost)</li>
+                    <li>Techniques de rééquilibrage des données (SMOTE, ADASYN)</li>
+                </ul>
+                <li>🔹 Interprétation & Recommandations : Identification des variables clés influençant l’accès aux financements.</li>
+            </ul>
+        </p>
+        </div> 
+
+        <div class="details-memoire-competences">
+        <h3>Compétences acquises</h3>     
+        <p>
+            <ul style="list-style-type:none;">
+                <li>✅ Data Science & Machine Learning</li>
+                <li>✅ Programmation : Python (Scikit-learn, Pandas), R</li>
+                <li>✅ Traitement & Analyse de Données</li>
+                <li>✅ Visualisation : Tableaux de bord dynamiques, statistiques exploratoires</li>
+                <li>✅ Communication : Interaction avec experts métiers et acteurs publics</li>
+                <li>✅ Vulgarisation : Explication des résultats obtenus dans un contexte compréhensible pour les non-spécialistes de la donnée</li>
+            </ul>
+        </p>
+        </div>  
+    </div>
+
+
+    
+   
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+
+
+    
+
+    <!--  Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>
+            <div class="reseaux_sociaux">
+            <a href="https://github.com/marieguib" target="_blank" class="github">
+            <img src="data/logos/logo_github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/marie-guibert-6653571a9" target="_blank" class="linkedin">
+            <img src="data/logos/logo_linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!--  Arrière plan-->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 2 },
+                move: { speed: 1 },
+                line_linked: { enable: true, opacity: 0.5 }
+            }
+        });
+        
+        // Fonction de défilement fluide vers la section de projet
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth' // pour un défilement fluide
+            });
+        }
+
+        function openLightbox(img) {
+            document.getElementById("lightbox-img").src = img.src;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        </script>
+</body>
+</html>

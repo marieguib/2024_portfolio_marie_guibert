@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui suis je ? - Marie Guibert</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <div class="name">
+            <a href="page_accueil.html">Marie Guibert</a>
+        </div>
+    </div>
+</header>
+
+<body class="page-moi">
+
+    <h1>Qui suis-je ?</h1>
+    <div class="separator"></div>
+
+
+    <!--  Menu de navigation -->
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="data/logos/logo_menu.svg" alt="logo_menu">
+    </div>
+    <div class="menu" id="menu">
+        <a href="page_accueil.html">Accueil</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="formations.html">Formations</a>
+        <a href="experiences.html">Expériences</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+        const menu = document.getElementById('menu');
+        const menuIcon = document.querySelector('.menu-icon');
+        menu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+        }
+    </script>
+
+
+    <!--  Contenu de la page -->
+    <section class="intro">
+        <div class="intro-content">
+            <img src="data/images/moi.jpg" alt="Photo_Marie" class="intro-image">
+        </div> 
+        <h2>Bonjour, je suis Marie Guibert</h2>
+    </section>
+    
+    <section class="personnalite">
+        <h3>Mais qui suis-je vraiment ?</h3>
+        <div class="description-personnelle">
+            <h4>🎓 Qui suis-je ?</h4>
+            <p>Passionnée par les nouvelles technologies et l'analyse des données, j'ai choisi de me spécialiser dans la data science afin de comprendre l'utilité des données et de les exploiter pour en tirer des informations pertinentes. 
+                Diplômée d'un Master en Mathématiques Appliquées et Statistiques, avec une spécialisation en intelligence artificielle, j'ai acquis de solides compétences dans les domaines des statistiques, de la data science et de la visualisation des données.
+            </p>
+            <h4>🚀 Ce qui me distingue des autres profils ?</h4>
+            <p> Tout d'abord, ma curiosité et ma réactivité face aux nouveaux défis. 
+                J'aime apprendre de nouvelles choses, relever des challenges et sortir de ma zone de confort. 
+                Ensuite, mon adaptabilité me permet de m'intéresser à des domaines variés, qu'ils me soient familiers ou non. 
+                Enfin, je sais travailler en équipe, communiquer efficacement et rendre les informations complexes accessibles à tous.
+            </p>
+            <h4>☀️ Un peu plus sur moi ?</h4>
+            <p>J’ai la chance d’avoir pu vivre et voyager près d'un an en Nouvelle-Zélande, 
+                ce qui a été une expérience enrichissante qui m'a permis de découvrir de nouvelles cultures, d'élargir mes horizons, et bien sur, de <strong>renforcer mon anglais</strong>.
+                Si vous me croisez dans la rue, vous me verrez probablement avec un casque sur les oreilles car la musique m'accomapagne au quotidien. 
+                J'aime également passer mon temps à explorer notre belle nature en faisant des randonnées, ou encore, en partageant des moments simples (mais toujours aussi authentiques) avec mes proches.
+                Ces moments de vie nourrissent et équilibrent mon quotidien, tant dans ma vie personnelle que professionnelle.
+            </p>
+            <h4>📍 Mes objectifs ?</h4>
+            <p>Aujourd'hui, je cherche à trouver un travail qui me correspond et qui me permettra de m'épanouir pleinement.  
+                Je suis donc à la recherche d'un poste de data scientist, data analyst ou encore de consultant en data science, 
+                dans lequel je pourrais apporter mon expertise mais aussi mon dynamisme.
+            </p>
+            </div>
+    </section>
+    
+    <section class="competences">
+        <h3>Compétences</h3>
+        <div class="competences-content">
+            <div class="competence">
+                <h4>Compétences techniques</h4>
+                <ul>
+                    <li><img src="images/python-icon.svg" alt="Python Logo"> Python et bibliothèques (Pandas, NumPy, Scikit-learn, etc.)</li>
+                    <li><img src="images/ml-icon.svg" alt="ML Icon"> Machine Learning : Régression, SVM, Réseaux de neurones</li>
+                    <li><img src="images/sql-icon.svg" alt="SQL Logo"> SQL et gestion des bases de données</li>
+                </ul>
+            </div>
+            <div class="competence">
+                <h4>Compétences professionnelles</h4>
+                <ul>
+                    <li><img src="images/project-management-icon.svg" alt="Project Management Icon"> Gestion de projets data-driven</li>
+                    <li><img src="images/communication-icon.svg" alt="Communication Icon"> Communication et vulgarisation</li>
+                    <li><img src="images/teamwork-icon.svg" alt="Teamwork Icon"> Esprit d’équipe et collaboration</li>
+                    <li><img src="images/adaptability-icon.svg" alt="Adaptability Icon"> Adaptabilité et ouverture au changement</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact">
+        <h3>En savoir plus</h3>
+        <p>Si vous souhaitez en savoir plus sur mon parcours, mes compétences ou simplement échanger, n'hésitez pas à me contacter. Je suis toujours ouverte à de nouvelles opportunités !</p>
+        <a href="#contact" class="btn-contact">Contactez-moi !</a>
+    </section>
+    
+
+
+    
+    <!-- Pied de la page -->
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:marieguibert.mg@gmail.com" class="email">Me contacter</a>
+            <div class="reseaux_sociaux">
+            <a href="https://github.com/marieguib" target="_blank" class="github">
+            <img src="data/logos/logo_github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/marie-guibert-6653571a9" target="_blank" class="linkedin">
+            <img src="data/logos/logo_linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Arrière plan-->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 2 },
+                move: { speed: 1 },
+                line_linked: { enable: true, opacity: 0.5 }
+            }
+        });
+    </script>
+
+</body>
+</html>
