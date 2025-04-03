@@ -246,14 +246,14 @@ footer {
 .intro {
     background-color: rgba(0, 0, 0, 0.3);
     padding: 40px;
-    display: flex;
-    align-items: left;
-    text-align: left;
+    text-align: center;
 }
 
 .intro h2 {
     font-size: 2rem;
     color: cornflowerblue;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .intro-content {
@@ -262,7 +262,13 @@ footer {
 
 .intro-image {
     width: 150px;
-    margin-right: 30px;
+    height: 150px; 
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden; 
+    object-fit: cover; 
 }
 
 /* Personnalite Section */
